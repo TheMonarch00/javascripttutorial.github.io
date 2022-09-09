@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>JavaScript Reg. expression</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      .head {
+        height:100px;
+        font-family: 'Courier New', monospace;
+        color:Yellow;
+        background-color: Black;
+        }
+      ul {
+        float:left;
+        width:13%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: Red;
+        position:sticky;
+        margin-top:15px;
+        }
+      li a{
+        border:1px solid black;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+      li a:hover {
+        background-color:Grey;
+        }
+      img {
+        float:left;
+        width:100px;
+        height:100px;
+        }
+      .body {
+        padding:5px;
+        margin-top:15px;
+        margin-left:15%;
+        margin-right:15%;
+        background-color:LightGrey;
+        font-family: "Trirong", serif;
+        font-size:15px;
+        border:1px solid black;
+        }
+      h2 {
+        font-size:30px;
+        font-family: "Audiowide", sans-serif;
+        text-align: center;
+        }
+      .example {
+        background-color:white;
+        padding:10px;
+        margin:5px;
+        }
+    </style>
+  </head>
+  <body style="background-color:#fce38a;">
+    <div class="head">
+      <h1 style="text-align:center;"><img src="Attachments/logo.png"><br>JAVA SCRIPT TUTORIAL</h>
+    </div>
+    <ul>
+      <li><a href="01home.html">Home</a></li>
+      <li><a href="02statements.html">Statements</a></li>
+      <li><a href="03comments.html">Comments</a></li>
+      <li><a href="04variables.html">Variables</a></li>
+      <li><a href="05operators.html">Operators</a></li>
+      <li><a href="06forms.html">Forms</a></li>
+      <li><a href="07functions.html">Functions</a></li>
+      <li><a href="08objects.html">Objects</a></li>
+      <li><a href="09events.html"<>Events</a></li>
+      <li><a href="10strings.html">Strings</a></li>
+      <li><a href="11numbers.html">Numbers</a></li>
+      <li><a href="12arrays.html">Arrays</a></li>
+      <li><a href="13dates.html">Dates</a></li>
+      <li><a href="14math.html">Math</a></li>
+      <li><a href="15conditions.html">Conditions</a></li>
+      <li><a href="16loops.html">Loops</a></li>
+      <li style="background-color: #111;"><a href="17regexp.html">Regexp</a></li>
+      <li><a href="18errors.html">Errors</a></li>
+      <li><a href="19this.html">this.</a></li>
+      <li><a href="20let.html">Let</a></li>
+      <li><a href="21const.html">Const.</a></li>
+      <li><a href="22classes.html">Classes</a></li>
+      <li><a href="23debugging.html">Debugging</a></li>
+    </ul>
+    <div class="body">
+      <h2>JavaScript Regular Expressions</h2>
+      <pre>A regular expression is a sequence of characters that forms a search pattern.
+
+The search pattern can be used for text search and text replace operations.</pre>
+      <h2>What Is a Regular Expression?</h2>
+      <pre>A regular expression is a sequence of characters that forms a <b>search pattern.</b>
+
+When you search for data in a text, you can use this search pattern to describe what you are searching for.
+
+A regular expression can be a single character, or a more complicated pattern.
+
+Regular expressions can be used to perform all types of <b>text search</b> and <b>text replace</b> operations.</pre>
+      <div class="example">
+        <h3>Syntax</h3>
+        <pre>/pattern/modifiers;</pre>
+      </div>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var patt = /JavaScript/i;</pre>
+      </div>
+      <pre>Example explained:
+
+<b>/JavaScript/i</b>  is a regular expression.
+
+<b>JavaScript</b>  is a pattern (to be used in a search).
+
+<b>i</b>  is a modifier (modifies the search to be case-insensitive).</pre>
+      <h2>Using String Methods</h2>
+      <pre>In JavaScript, regular expressions are often used with the two <b>string methods:</b> <b>search()</b> and <b>replace()</b>.
+
+The <b>search()</b> method uses an expression to search for a match, and returns the position of the match.
+
+The <b>replace()</b> method returns a modified string where the pattern is replaced.</pre>
+      <h2>Using String search() With a String</h2>
+      <pThe <b>search()</b> method searches a string for a specified value and returns the position of the match:></p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Use a string to do a search for "JavaScript" in a string:
+
+var str = "Let's learn JavaScript!";
+var n = str.search("JavaScript");</pre>
+        <iframe src="Attachments/regexp1.html" title="Example1" width=100% height=100px></iframe>
+      </div>
+      <h2>Using String search() With a Regular Expression</h2>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Use a regular expression to do a case-insensitive search for "w3schools" in a string:
+
+var str = "Let's learn JavaScript!";
+var n = str.search(/javascript/i);</pre>
+        <iframe src="Attachments/regexp2.html" title="Example2" width=100% height=100px></iframe>
+      </div>
+      <h2>Using String replace() With a String</h2>
+      <p>The <b>replace()</b> method replaces a specified value with another value in a string:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "Let's learn HTML!";
+var res = str.replace("HTML", "JavaScript");</pre>
+      <iframe src="Attachments/regexp3.html" title="Example3" width=100% height=130px></iframe>
+      </div>
+      <h2>Use String replace() With a Regular Expression</h2>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Use a case insensitive regular expression to replace HTML with JavaScript in a string:
+
+var str = "Let's learn HTML!";
+var res = str.replace(/html/i, "JavaScript");
+
+The result in res will be:</pre>
+      <iframe src="Attachments/regexp4.html" title="Example4" width=100% height=130px></iframe>
+      </div>
+      <pre>
+<em>Regular expression arguments (instead of string arguments) can be used in the methods above.
+Regular expressions can make your search much more powerful (case insensitive for example).
+</em></pre>
+      <h2>Regular Expression Modifiers</h2>
+      <p><b>Modifiers</b> can be used to perform case-insensitive more global searches:</p>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Modifier</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>i</td>
+          <td>Perform case-insensitive matching</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>g</td>
+          <td>Perform a global match (find all matches rather than stopping after the first match)</td>
+        </tr>
+        <tr>
+          <td>m</td>
+          <td>Perform multiline matching</td>
+        </tr>
+      </table>
+      <h2>Regular Expression Patterns</h2>
+      <p><b>Brackets</b> are used to find a range of characters:</p>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Expression</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>[abc]</td>
+          <td>	Find any of the characters between the brackets</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>[0-9]</td>
+          <td>Find any of the digits between the brackets</td>
+        </tr>
+        <tr>
+          <td>(x|y)</td>
+          <td>Find any of the alternatives separated with |</td>
+        </tr>
+      </table>
+      <p><b>Metacharacters</b> are characters with a special meaning:</p>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Metacharacter</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>\d</td>
+          <td>Find a digit</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>\s</td>
+          <td>Find a whitespace character</td>
+        </tr>
+        <tr>
+          <td>\b</td>
+          <td>Find a match at the beginning of a word like this: \bWORD, or at the end of a word like this: WORD\b</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>\uxxxx</td>
+          <td>	Find the Unicode character specified by the hexadecimal number xxxx</td>
+        </tr>
+      </table>
+      <p><b>Quantifiers</b> define quantities:</p>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Quantifier</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>n+</td>
+          <td>Matches any string that contains at least one n</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>n*</td>
+          <td>Matches any string that contains zero or more occurrences of n</td>
+        </tr>
+        <tr>
+          <td>n?</td>
+          <td>	Matches any string that contains zero or one occurrences of n</td>
+        </tr>
+      </table>
+      <h2>Using the RegExp Object</h2>
+      <p>In JavaScript, the RegExp object is a regular expression object with predefined properties and methods.</p>
+      <h2>Using test()</h2>
+      <pre>The <b>test()</b> method is a RegExp expression method.
+
+It searches a string for a pattern, and returns true or false, depending on the result.
+
+The following example searches a string for the character "e":</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var patt = /e/;
+patt.test("The best things in life are free!");
+Since there is an "e" in the string, the output of the code above will be:</pre>
+        <iframe src="Attachments/regexp5.html" title="Example5" width=100% height=100px></iframe>
+      <pre>You don't have to put the regular expression in a variable first. The two lines above can be shortened to one:
+
+/e/.test("The best things in life are free!");
+</pre>
+      </div>
+      <h2>Using exec()</h2>
+      <pre>The <b>exec()</b> method is a RegExp expression method.
+
+It searches a string for a specified pattern, and returns the found text as an object.
+
+If no match is found, it returns an empty (null) object.
+
+The following example searches a string for the character "e":</pre>
+        <div class="example">
+        <h3>Example</h3>
+        <pre>/e/.exec("The best things in life are free!");
+</pre>
+        <iframe src="Attachments/regexp6.html" title="Example6" width=100% height=100px></iframe>
+      </div>
+      <div class="example">
+        <h3 align=center>Assignment</h3>
+        <pre>1. Validating and displaying the dates in mm/dd/yyyy or mm-dd-yyyy format.
+
+2.Use a regular expression to test for the existence of a string
+
+3. Display the entered number grouped in 3 separated by comma
+</pre>
+      </div>
+      <div class="example">
+        <h3 align = "center">Quiz</h3>
+        <iframe src="Attachments/regexp_quiz.html" title="quiz" width=100% height=600px></iframe>
+      </div>
+</div>
+<ul style="width:90%; overflow:hidden; margin:50px;background-color:white;">
+      <li style="float:left;background-color:red;"><a href="16loops.html">Prev</a></li>
+      <li style="float:right;background-color:red;"><a href="18errors.html">Next</a></li>
+</ul>
+</body>
+</html>

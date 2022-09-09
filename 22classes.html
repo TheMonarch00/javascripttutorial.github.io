@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>JavaScript Classes</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      .head {
+        height:100px;
+        font-family: 'Courier New', monospace;
+        color:Yellow;
+        background-color: Black;
+        }
+      ul {
+        float:left;
+        width:13%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: Red;
+        position:sticky;
+        margin-top:15px;
+        }
+      li a{
+        border:1px solid black;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+      li a:hover {
+        background-color:Grey;
+        }
+      img {
+        float:left;
+        width:100px;
+        height:100px;
+        }
+      .body {
+        padding:5px;
+        margin-top:15px;
+        margin-left:15%;
+        margin-right:15%;
+        background-color:LightGrey;
+        font-family: "Trirong", serif;
+        font-size:15px;
+        border:1px solid black;
+        }
+      h2 {
+        font-size:30px;
+        font-family: "Audiowide", sans-serif;
+        text-align: center;
+        }
+      .example {
+        background-color:white;
+        padding:10px;
+        margin:5px;
+        }
+    </style>
+  </head>
+  <body style="background-color:#fce38a;">
+    <div class="head">
+      <h1 style="text-align:center;"><img src="Attachments/logo.png"><br>JAVA SCRIPT TUTORIAL</h>
+    </div>
+    <ul>
+      <li><a href="01home.html">Home</a></li>
+      <li><a href="02statements.html">Statements</a></li>
+      <li><a href="03comments.html">Comments</a></li>
+      <li><a href="04variables.html">Variables</a></li>
+      <li><a href="05operators.html">Operators</a></li>
+      <li><a href="06forms.html">Forms</a></li>
+      <li><a href="07functions.html">Functions</a></li>
+      <li><a href="08objects.html">Objects</a></li>
+      <li><a href="09events.html"<>Events</a></li>
+      <li><a href="10strings.html">Strings</a></li>
+      <li><a href="11numbers.html">Numbers</a></li>
+      <li><a href="12arrays.html">Arrays</a></li>
+      <li><a href="13dates.html">Dates</a></li>
+      <li><a href="14math.html">Math</a></li>
+      <li><a href="15conditions.html">Conditions</a></li>
+      <li><a href="16loops.html">Loops</a></li>
+      <li><a href="17regexp.html">Regexp</a></li>
+      <li><a href="18errors.html">Errors</a></li>
+      <li><a href="19this.html">this.</a></li>
+      <li><a href="20let.html">Let</a></li>
+      <li><a href="21const.html">Const.</a></li>
+      <li style="background-color: #111;"><a href="22classes.html">Classes</a></li>
+      <li><a href="23debugging.html">Debugging</a></li>
+    </ul>
+    <div class="body">
+      <h2>JavaScript Classes</h2>
+      <pre>ECMAScript 2015, also known as ES6, introduced JavaScript Classes.
+
+JavaScript Classes are templates for JavaScript Objects.</pre>  
+      <h2>JavaScript Class Syntax</h2>
+      <pre>Use the keyword <b>class</b> to create a class.
+
+Always add a method named <b>constructor()</b>:</pre>
+      <div class="example">
+        <h3>Syntax</h3>
+        <pre>class ClassName {
+  constructor() { ... }
+}</pre>
+      </div>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+}</pre>
+      </div>
+      <pre>The example above creates a class named "Car".
+
+The class has two initial properties: "name" and "year".
+
+<em>A JavaScript class is <b>not an object</b>.
+
+It is a <b>template</b> for JavaScript objects.</em></pre>
+      <h2>Using a Class</h2>
+      <p>When you have a class, you can use the class to create objects:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>let myCar1 = new Car("Ford", 2014);
+let myCar2 = new Car("Audi", 2019);
+</pre>
+      </div>
+      <pre>The example above uses the <b>Car class</b> to create two <b>Car objects.</b>
+
+<em>The constructor method is called automatically when a new object is created.</em>
+</pre>
+      <h2>The Constructor Method</h2>
+      <pre>The constructor method is a special method:
+
+It has to have the exact name "constructor"
+It is executed automatically when a new object is created
+It is used to initialize object properties
+
+If you do not define a constructor method, JavaScript will add an empty constructor method.</pre>
+      <h2>Class Methods</h2>
+      <pre>Class methods are created with the same syntax as object methods.
+
+Use the keyword class to create a class.
+
+Always add a constructor() method.
+
+Then add any number of methods.</pre>
+      <div class="example">
+        <h3>Syntax</h3>
+        <pre>class ClassName {
+  constructor() { ... }
+  method_1() { ... }
+  method_2() { ... }
+  method_3() { ... }
+}</pre>
+      </div>
+      <p>Create a Class method named "age", that returns the Car age:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  age() {
+    let date = new Date();
+    return date.getFullYear() - this.year;
+  }
+}
+
+let myCar = new Car("Ford", 2014);
+document.getElementById("demo").innerHTML =
+"My car is " + myCar.age() + " years old.";</pre>
+        <iframe src="Attachments/class1.html" title="Example1" width=100% height=50px></iframe>
+      </div>
+      <p>You can send parameters to Class methods:</p>
+      <h2>"use strict"</h2>
+      <pre>The syntax in classes must be written in "strict mode".
+
+You will get an error if you do not follow the "strict mode" rules.</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>In "strict mode" you will get an error if you use a variable without declaring it:
+
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  age() {
+    // date = new Date();  <b>// This will not work</b>
+    let date = new Date(); <b>// This will work</b>
+    return date.getFullYear() - this.year;
+  }
+}</pre>
+        <iframe src="Attachments/class2.html" title="Example2" width=100% height=100px></iframe>
+      </div>
+      <h2>Class Inheritance</h2>
+      <pre>To create a class inheritance, use the <b>extends</b> keyword.
+
+A class created with a class inheritance inherits all the methods from another class:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Create a class named "Model" which will inherit the methods from the "Car" class:
+
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return 'I have a ' + this.carname;
+  }
+}
+
+class Model extends Car {
+  constructor(brand, mod) {
+    super(brand);
+    this.model = mod;
+  }
+  show() {
+    return this.present() + ', it is a ' + this.model;
+  }
+}
+
+let myCar = new Model("Ford", "Mustang");
+document.getElementById("demo").innerHTML = myCar.show();</pre>
+        <iframe src="Attachments/class3.html" title="Example3" width=100% height=100px></iframe>
+      </div>
+      <pre>The <b>super()</b> method refers to the parent class.
+
+By calling the <b>super()</b> method in the constructor method, we call the parent's constructor method and gets
+access to the parent's properties and methods.
+
+<em>Inheritance is useful for code reusability: reuse properties and methods of an existing class when you create a new class.</em></pre>
+      <h2>Getters and Setters</h2>
+      <pre>Classes also allows you to use getters and setters.
+
+It can be smart to use getters and setters for your properties, especially if you want to do something special
+with the value before returning them, or before you set them.
+
+To add getters and setters in the class, use the <b>get</b> and <b>set</b> keywords.</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Create a getter and a setter for the "carname" property:
+
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  get cnam() {
+    return this.carname;
+  }
+  set cnam(x) {
+    this.carname = x;
+  }
+}
+
+let myCar = new Car("Ford");
+
+document.getElementById("demo").innerHTML = myCar.cnam;</pre>
+        <iframe src="Attachments/class4.html" title="Example4" width=100% height=50px></iframe>
+      </div>
+      <pre><b>Note:</b> even if the getter is a method, you do not use parentheses when you want to get the property value.
+
+The name of the getter/setter method cannot be the same as the name of the property, in this case <b>carname.</b>
+
+Many programmers use an underscore character <b>" _ "</b> before the property name to separate the getter/setter from the
+actual property:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>You can use the underscore character to separate the getter/setter from the actual property:
+
+class Car {
+  constructor(brand) {
+    this._carname = brand;
+  }
+  get carname() {
+    return this._carname;
+  }
+  set carname(x) {
+    this._carname = x;
+  }
+}
+
+let myCar = new Car("Ford");
+
+document.getElementById("demo").innerHTML = myCar.carname;
+</pre>
+        <iframe src="Attachments/class5.html" title="Example5" width=100% height=100px></iframe>
+      </div>
+      <p>To use a setter, use the same syntax as when you set a property value, without parentheses:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Use a setter to change the carname to "Volvo":
+
+class Car {
+  constructor(brand) {
+    this._carname = brand;
+  }
+  get carname() {
+    return this._carname;
+  }
+  set carname(x) {
+    this._carname = x;
+  }
+}
+
+let myCar = new Car("Ford");
+myCar.carname = "Volvo";
+document.getElementById("demo").innerHTML = myCar.carname;</pre>
+        <iframe src="Attachments/class6.html" title="Example6" width=100% height=100px></iframe>
+      </div>
+      <h2>Hoisting</h2>
+      <pre>Unlike functions, and other JavaScript declarations, class declarations are not hoisted.
+
+That means that you must declare a class before you can use it:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>//You cannot use the class yet.
+//myCar = new Car("Ford") <b>//This would raise an error.</b>
+
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+}
+
+//Now you can use the class:
+let myCar = new Car("Ford")</pre>
+      </div><br>
+      <em><b>Note:</b> For other declarations, like functions, you will NOT get an error when you try to use it before it is declared, because the default behavior of JavaScript declarations are hoisting (moving the declaration to the top).</em> 
+      <h2>JavaScript Static Methods</h2>
+      <pre>Static class methods are defined on the class itself.
+
+You cannot call a <b>static</b> method on an object, only on an object class.</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>class Car {
+  constructor(name) {
+    this.name = name;
+  }
+  static hello() {
+    return "Hello!!";
+  }
+}
+
+let myCar = new Car("Ford");
+
+<b>// You can call 'hello()' on the Car Class:</b>
+document.getElementById("demo").innerHTML = Car.hello();
+<b>
+// But NOT on a Car Object:
+// document.getElementById("demo").innerHTML = myCar.hello();
+// this will raise an error.</b></pre>
+      </div>
+      <p>If you want to use the myCar object inside the <b>static</b> method, you can send it as a parameter:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>class Car {
+  constructor(name) {
+    this.name = name;
+  }
+  static hello(x) {
+    return "Hello " + x.name;
+  }
+}
+let myCar = new Car("Ford");
+document.getElementById("demo").innerHTML = Car.hello(myCar);</pre>
+        <iframe src="Attachments/class7.html" title="Example7" width=100% height=50px></iframe>
+      </div>
+       <div class="example">
+        <h3 align=center>Assignment</h3>
+        <pre>1. Create a class named point with two properties x & y.
+
+Create another class named line which inherits the properties of point and calculates distance between
+two points.
+
+Create another class names triangle which inherits both the above classes to find the perimeter and area
+of triangle.</pre>
+      </div>
+      <div class="example">
+        <h3 align = "center">Quiz</h3>
+        <iframe src="Attachments/class_quiz.html" title="quiz" width=100% height=600px></iframe>
+      </div>
+</div>
+<ul style="width:90%; overflow:hidden; margin:50px;background-color:white;">
+      <li style="float:left;background-color:red;"><a href="21const.html">Prev</a></li>
+      <li style="float:right;background-color:red;"><a href="23debugging.html">Next</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>JavaScript Arrays</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      .head {
+        height:100px;
+        font-family: 'Courier New', monospace;
+        color:Yellow;
+        background-color: Black;
+        }
+      ul {
+        float:left;
+        width:13%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: Red;
+        position:sticky;
+        margin-top:15px;
+        }
+      li a{
+        border:1px solid black;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+      li a:hover {
+        background-color:Grey;
+        }
+      img {
+        float:left;
+        width:100px;
+        height:100px;
+        }
+      .body {
+        padding:5px;
+        margin-top:15px;
+        margin-left:15%;
+        margin-right:15%;
+        background-color:LightGrey;
+        font-family: "Trirong", serif;
+        font-size:15px;
+        border:1px solid black;
+        }
+      h2 {
+        font-size:30px;
+        font-family: "Audiowide", sans-serif;
+        text-align: center;
+        }
+      .example {
+        background-color:white;
+        padding:10px;
+        margin:5px;
+        }
+    </style>
+  </head>
+  <body style="background-color:#fce38a;">
+    <div class="head">
+      <h1 style="text-align:center;"><img src="Attachments/logo.png"><br>JAVA SCRIPT TUTORIAL</h>
+    </div>
+    <ul>
+      <li><a href="01home.html">Home</a></li>
+      <li><a href="02statements.html">Statements</a></li>
+      <li><a href="03comments.html">Comments</a></li>
+      <li><a href="04variables.html">Variables</a></li>
+      <li><a href="05operators.html">Operators</a></li>
+      <li><a href="06forms.html">Forms</a></li>
+      <li><a href="07functions.html">Functions</a></li>
+      <li><a href="08objects.html">Objects</a></li>
+      <li><a href="09events.html">Events</a></li>
+      <li><a href="10strings.html">Strings</a></li>
+      <li><a href="11numbers.html">Numbers</a></li>
+      <li style="background-color: #111;"><a href="12arrays.html">Arrays</a></li>
+      <li><a href="13dates.html">Dates</a></li>
+      <li><a href="14math.html">Math</a></li>
+      <li><a href="15conditions.html">Conditions</a></li>
+      <li><a href="16loops.html">Loops</a></li>
+      <li><a href="17regexp.html">Regexp</a></li>
+      <li><a href="18errors.html">Errors</a></li>
+      <li><a href="19this.html">this.</a></li>
+      <li><a href="20let.html">Let</a></li>
+      <li><a href="21const.html">Const.</a></li>
+      <li><a href="22classes.html">Classes</a></li>
+      <li><a href="23debugging.html">Debugging</a></li>
+    </ul>
+    <div class="body">
+      <h2>JavaScript Arrays</h2>
+      <p>JavaScript arrays are used to store multiple values in a single variable.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var cars = ["Saab", "Volvo", "BMW"];</pre>
+      </div>
+      <h2>What is an Array?</h2>
+      <pre>An array is a special variable, which can hold more than one value at a time.
+
+If you have a list of items (a list of car names, for example), storing the cars in single variables could
+look like this:</pre>
+      <div class="example">
+        <pre>var car1 = "Saab";
+var car2 = "Volvo";
+var car3 = "BMW";</pre>
+      </div>
+      <pre>However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?
+
+The solution is an array!
+
+An array can hold many values under a single name, and you can access the values by referring to an index number.</pre>
+      <h2>Creating an Array</h2>
+      <p>Using an array literal is the easiest way to create a JavaScript Array.</p>
+      <div class="example">
+        <h3>Syntax</h3>
+        <pre>var array_name = [item1, item2, ...];</pre>
+        <h3>Example</h3>
+        <pre>var cars = ["Saab", "Volvo", "BMW"];</pre>
+      </div>
+      <p>Spaces and line breaks are not important. A declaration can span multiple lines:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var cars = [
+  "Saab",
+  "Volvo",
+  "BMW"
+];</pre>
+      </div>
+      <h2>Using the JavaScript Keyword new</h2>
+      <p>The following example also creates an Array, and assigns values to it:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var cars = new Array("Saab", "Volvo", "BMW");</pre>
+      </div>
+      <pre><em>The two examples above do exactly the same. There is no need to use <b>new Array().</b>
+For simplicity, readability and execution speed, use the first one (the array literal method).</em></pre>
+      <h2>Access the Elements of an Array</h2>
+      <pre>You access an array element by referring to the <b>index number</b>.
+
+This statement accesses the value of the first element in <b>cars</b>:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars[0];</pre>
+        <iframe src="Attachments/array1.html" title="Example1" width=100% height=50px></iframe>
+      </div>
+      <h2>Changing an Array Element</h2>
+      <p>This statement changes the value of the first element in cars:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var cars = ["Saab", "Volvo", "BMW"];
+cars[0] = "Opel";
+document.getElementById("demo").innerHTML = cars[0];</pre>
+        <iframe src="Attachments/array2.html" title="Example2" width=100% height=50px></iframe>
+      </div>
+      <h2>Access the Full Array</h2>
+      <p>With JavaScript, the full array can be accessed by referring to the array name:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars;</pre>
+        <iframe src="Attachments/array3.html" title="Example3" width=100% height=50px></iframe>
+      </div>
+      <h2>Arrays are Objects</h2>
+      <pre>Arrays are a special type of objects. The <b>typeof</b> operator in JavaScript returns "object" for arrays.
+
+But, JavaScript arrays are best described as arrays.
+
+Arrays use <b>numbers</b> to access its "elements". In this example, <b>person[0]</b> returns John:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var person = ["John", "Doe", 46];</pre>
+        <iframe src="Attachments/array4.html" title="Example4" width=100% height=50px></iframe>
+      </div>
+      <p>Objects use <b>names</b> to access its "members". In this example, person.firstName returns John:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var person = {firstName:"John", lastName:"Doe", age:46};</pre>
+        <iframe src="Attachments/array5.html" title="Example5" width=100% height=50px></iframe>
+      </div>
+      <h2>Array Elements Can Be Objects</h2>
+      <pre>JavaScript variables can be objects. Arrays are special kinds of objects.
+
+Because of this, you can have variables of different types in the same Array.
+
+You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>myArray[0] = Date.now;
+myArray[1] = myFunction;
+myArray[2] = myCars;</pre>
+      </div>
+      <h2>The length Property</h2>
+      <p>The <b>length</b> property of an array returns the length of an array (the number of array elements).</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.length;   // the length of fruits is 4
+</pre>
+        <iframe src="Attachments/array6.html" title="Example6" width=100% height=50px></iframe>
+      </div>
+      <p><em>The <b>length</b> property is always one more than the highest array index.</em></p>
+      <h2>Looping Array Elements</h2>
+      <p>The safest way to loop through an array, is using a <b>for</b> loop:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>fruits = ["Banana", "Orange", "Apple", "Mango"];
+fLen = fruits.length;
+
+text = "&lt;ul>";
+for (i = 0; i < fLen; i++) {
+  text += "&lt;li>" + fruits[i] + "&lt;/li>";
+}
+text += "&lt;/ul>";</pre>
+        <iframe src="Attachments/array7.html" title="Example7" width=100% height=100px></iframe>
+      </div>
+      <p>You can also use the <b>Array.forEach()</b> function:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits, text;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+text = "&lt;ul>";
+fruits.forEach(myFunction);
+text += "&lt;/ul>";
+
+function myFunction(value) {
+  text += "&lt;li>" + value + "&lt;/li>";
+}</pre>
+        <iframe src="Attachments/array8.html" title="Example8" width=100% height=100px></iframe>
+      </div>
+      <h2>Associative Arrays</h2>
+      <pre>Many programming languages support arrays with named indexes.
+
+Arrays with named indexes are called associative arrays (or hashes).
+
+JavaScript does <b>not</b> support arrays with named indexes.
+
+In JavaScript, <b>arrays</b> always use <b>numbered indexes.</b>
+
+<b>If you use named indexes, JavaScript will redefine the array to a standard object.
+After that, some array methods and properties will produce incorrect results.</b></pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var person = [];
+person["firstName"] = "John";
+person["lastName"] = "Doe";
+person["age"] = 46;
+var x = person.length;     <b>// person.length will return 0</b>
+var y = person[0];         <b>// person[0] will return undefined</b></pre>
+        <iframe src="Attachments/array9.html" title="Example9" width=100% height=50px></iframe>
+      </div>
+      <h2>The Difference Between Arrays and Objects</h2>
+      <pre>In JavaScript, <b>arrays</b> use <b>numbered indexes</b>.  
+
+In JavaScript, <b>objects</b> use <b>named indexes</b>.
+
+<em>Arrays are a special kind of objects, with numbered indexes.</em></pre>
+      <h2>When to Use Arrays. When to use Objects.</h2>
+      <pre>JavaScript does not support associative arrays.
+You should use <b>objects</b> when you want the element names to be <b>strings (text)</b>.
+You should use <b>arrays</b> when you want the element names to be <b>numbers</b>.</pre>
+      <h2>JavaScript Array Methods</h2>
+      <h2>Converting Arrays to Strings</h2>
+      <p>The JavaScript method <b>toString()</b> converts an array to a string of (comma separated) array values.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();</pre>
+        <iframe src="Attachments/array10.html" title="Example10" width=100% height=50px></iframe>
+      </div>
+      <pre>The <b>join()</b> method also joins all array elements into a string.
+
+It behaves just like <b>toString()</b>, but in addition you can specify the separator:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.join(" * ");</pre>
+        <iframe src="Attachments/array11.html" title="Example11" width=100% height=50px></iframe>
+      </div>
+      <h2>Popping and Pushing</h2>
+      <pre>When you work with arrays, it is easy to remove elements and add new elements.
+
+This is what popping and pushing is:
+
+Popping items <b>out</b> of an array, or pushing items <b>into</b> an array.</pre>
+      <h2>Popping</h2>
+      <p>The <b>pop()</b> method removes the last element from an array:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.pop();              <b>// Removes the last element ("Mango") from fruits</b></pre>
+        <iframe src="Attachments/array12.html" title="Example12" width=100% height=100px></iframe>
+      </div>
+      <p>The <b>pop()</b> method returns the value that was "popped out":</p>
+      <h2>Pushing</h2>
+      <p>The <b>push()</b> method adds a new element to an array (at the end):</p>
+      <div class="example">
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Kiwi");       <b>//  Adds a new element ("Kiwi") to fruits</b></pre>
+        <iframe src="Attachments/array13.html" title="Example13" width=100% height=100px></iframe>
+      </div>
+      <p>The <b>push()</b> method returns the new array length:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var x = fruits.push("Kiwi");   <b>//  the value of x is 5</b></pre>
+          <iframe src="Attachments/array14.html" title="Example14" width=100% height=100px></iframe>
+      </div>
+      <h2>Shifting Elements</h2>
+      <pre>Shifting is equivalent to popping, working on the first element instead of the last.
+
+The <b>shift()</b> method removes the first array element and "shifts" all other elements to a lower index.</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.shift();            <b>// Removes the first element "Banana" from fruits</b></pre>
+        <iframe src="Attachments/array15.html" title="Example15" width=100% height=100px></iframe>
+      </div>
+      <p>The <b>shift()</b> method returns the string that was "shifted out":</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var x = fruits.shift();    <b>// the value of x is "Banana"</b></pre>
+        <iframe src="Attachments/array16.html" title="Example16" width=100% height=100px></iframe>
+      </div>
+      <p>The <b>unshift()</b> method adds a new element to an array (at the beginning), and "unshifts" older elements:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("Lemon");    <b>// Adds a new element "Lemon" to fruits</b></pre>
+        <iframe src="Attachments/array17.html" title="Example17" width=100% height=100px></iframe>
+      </div>
+      <p>The <b>unshift()</b> method returns the new array length.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+x = fruits.unshift("Lemon");    <b>// x Returns 5</b></pre>
+        <iframe src="Attachments/array18.html" title="Example18" width=100% height=100px></iframe>
+      </div>
+      <h2>Changing Elements</h2>
+      <pre>Array elements are accessed using their index number:
+<b>
+Array indexes start with 0. [0] is the first array element, [1] is the second, [2] is the third ...</b>
+</pre>
+        <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[0] = "Kiwi";        <b>// Changes the first element of fruits to "Kiwi"</b></pre>
+        <iframe src="Attachments/array19.html" title="Example19" width=100% height=100px></iframe>
+      </div>
+      <p>The <b>length</b> property provides an easy way to append a new element to an array:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[fruits.length] = "Kiwi";          <b>// Appends "Kiwi" to fruits</b></pre>
+        <iframe src="Attachments/array20.html" title="Example20" width=100% height=100px></iframe>
+      </div>
+      <h2>Deleting Elements</h2>
+      <p>Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator delete:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+delete fruits[0];           <b>// Changes the first element in fruits to undefined</b></pre>
+        <iframe src="Attachments/array21.html" title="Example21" width=100% height=100px></iframe>
+      </div>
+      <br><b>Using delete may leave undefined holes in the array. Use pop() or shift() instead.</b><br>
+      <h2>Splicing an Array</h2>
+      <p>The splice() method can be used to add new items to an array:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+</pre>
+        <iframe src="Attachments/array22.html" title="Example22" width=100% height=150px></iframe>
+      </div>
+      <pre>The first parameter (2) defines the position <b>where</b> new elements should be <b>added</b> (spliced in).
+
+The second parameter (0) defines <b>how many</b> elements should be <b>removed</b>.
+
+The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be <b>added</b>.
+
+The <b>splice()</b> method returns an array with the deleted items:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 2, "Lemon", "Kiwi");</pre>
+        <iframe src="Attachments/array23.html" title="Example23" width=100% height=200px></iframe>
+      </div>
+      <h2>Using splice() to Remove Elements</h2>
+      <p>With clever parameter setting, you can use <b>splice()</b> to remove elements without leaving "holes" in the array:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(0, 1);        <b>// Removes the first element of fruits</b></pre>
+        <iframe src="Attachments/array24.html" title="Example24" width=100% height=100px></iframe>
+      </div>
+      <pre>The first parameter (0) defines the position where new elements should be <b>added</b> (spliced in).
+
+The second parameter (1) defines <b>how many</b> elements should be <b>removed</b>.
+
+The rest of the parameters are omitted. No new elements will be added.</pre>
+      <h2>Merging (Concatenating) Arrays</h2>
+      <p>The concat() method creates a new array by merging (concatenating) existing arrays:</p>
+      <div class="example">
+        <h3>Example (Merging Two Arrays)</h3>
+        <pre>var myGirls = ["Cecilie", "Lone"];
+var myBoys = ["Emil", "Tobias", "Linus"];
+var myChildren = myGirls.concat(myBoys);   <b>// Concatenates (joins) myGirls and myBoys</b></pre>
+        <iframe src="Attachments/array25.html" title="Example25" width=100% height=50px></iframe>
+      </div>
+      <b>The concat() method does not change the existing arrays. It always returns a new array.</b>
+      <p>The <b>concat()</b> method can take any number of array arguments:</p>
+      <div class="example">
+        <h3>Example (Merging Three Arrays)</h3>
+        <pre>var arr1 = ["Cecilie", "Lone"];
+var arr2 = ["Emil", "Tobias", "Linus"];
+var arr3 = ["Robin", "Morgan"];
+var myChildren = arr1.concat(arr2, arr3);   <b>// Concatenates arr1 with arr2 and arr3</b></pre>
+        <iframe src="Attachments/array26.html" title="Example26" width=100% height=50px></iframe>
+      </div>
+      <p>The concat() method can also take strings as arguments:</p>
+      <div class="example">
+        <h3>Example(Merging an Array with Values)</h3>
+        <pre>var arr1 = ["Emil", "Tobias", "Linus"];
+var myChildren = arr1.concat("Peter"); </pre>
+        <iframe src="Attachments/array27.html" title="Example27" width=100% height=50px></iframe>
+      </div>
+      <h2>Slicing an Array</h2>
+      <pre>The <b>slice()</b> method slices out a piece of an array into a new array.
+
+This example slices out a part of an array starting from array element 1 ("Orange"):</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1);</pre>
+        <iframe src="Attachments/array28.html" title="Example28" width=100% height=100px></iframe>
+      </div>
+      <b>The slice() method creates a new array. It does not remove any elements from the source array.</b>
+      <pre>The <b>slice()</b> method can take two arguments like slice(1, 3).
+
+The method then selects elements from the start argument, and up to (but not including) the end argument.</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1, 3);</pre>
+        <iframe src="Attachments/array29.html" title="Example29" width=100% height=100px></iframe>
+      </div>
+      <p>If the end argument is omitted, like in the first examples, the <b>slice()</b> method slices out the rest of the array.</p>
+      <h2>Automatic toString()</h2>
+      <pre>JavaScript automatically converts an array to a comma separated string when a primitive value is expected.
+
+This is always the case when you try to output an array.
+
+These two examples will produce the same result:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();</pre>
+        <iframe src="Attachments/array30.html" title="Example30" width=100% height=50px></iframe>
+      </div>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;</pre>
+        <iframe src="Attachments/array31.html" title="Example31" width=100% height=50px></iframe>
+      </div>
+      <b>All JavaScript objects have a toString() method.</b>
+      <h2>Sorting an Array</h2>
+      <p>The <b>sort()</b> method sorts an array alphabetically:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();        // Sorts the elements of fruits</pre>
+        <iframe src="Attachments/array32.html" title="Example32" width=100% height=100px></iframe>
+      </div>
+      <h2>Reversing an Array</h2>
+      <pre>The <b>reverse()</b> method reverses the elements in an array.
+
+You can use it to sort an array in descending order:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();        <b>// First sort the elements of fruits</b>
+fruits.reverse();     <b>// Then reverse the order of the elements</b></pre>
+        <iframe src="Attachments/array33.html" title="Example33" width=100% height=100px></iframe>
+      </div>
+      <h2>Numeric Sort</h2>
+      <pre>By default, the <b>sort()</b> function sorts values as strings.
+
+This works well for strings ("Apple" comes before "Banana").
+
+However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+
+Because of this, the <b>sort()</b> method will produce incorrect result when sorting numbers.
+
+You can fix this by providing a <b>compare function</b>:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b});</pre>
+        <iframe src="Attachments/array34.html" title="Example34" width=100% height=100px></iframe>
+      </div>
+      <p>Use the same trick to sort an array descending:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return b - a});</pre>
+        <iframe src="Attachments/array35.html" title="Example35" width=100% height=100px></iframe>
+      </div>
+      <h2>The Compare Function</h2>
+      <pre>The purpose of the compare function is to define an alternative sort order.
+
+The compare function should return a negative, zero, or positive value, depending on the arguments:</pre>
+      <div class="example">
+        <pre>function(a, b){return a - b}</pre>
+      </div>
+      <pre>When the <b>sort()</b> function compares two values, it sends the values to the compare function, and sorts
+the values according to the returned (negative, zero, positive) value.
+
+If the result is negative <b>a</b> is sorted before <b>b</b>.
+
+If the result is positive <b>b</b> is sorted before <b>a</b>.
+
+If the result is 0 no changes are done with the sort order of the two values.
+</pre>
+<h3>Example:</h3>
+<pre>
+The compare function compares all the values in the array, two values at a time <b>(a, b)</b>.
+
+When comparing 40 and 100, the <b>sort()</b> method calls the compare function(40, 100).
+
+The function calculates 40 - 100 <b>(a - b)</b>, and since the result is negative (-60),  the sort function will sort 40
+as a value lower than 100.
+
+You can use this code snippet to experiment with numerically and alphabetically sorting:</pre>
+       <div class="example">
+         <h3>Example</h3>
+         <pre> &lt;button onclick="myFunction1()">Sort Alphabetically &lt;/button>
+ &lt;button onclick="myFunction2()">Sort Numerically &lt;/button>
+
+ &lt;p id="demo"> &lt;/p>
+
+ &lt;script>
+var points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo").innerHTML = points;
+
+function myFunction1() {
+  points.sort();
+  document.getElementById("demo").innerHTML = points;
+}
+
+function myFunction2() {
+  points.sort(function(a, b){return a - b});
+  document.getElementById("demo").innerHTML = points;
+}
+ &lt;/script></pre>
+        <iframe src="Attachments/array36.html" title="Example36" width=100% height=100px></iframe>
+      </div>
+      <h2>Sorting an Array in Random Order</h2>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return 0.5 - Math.random()});</pre>
+        <iframe src="Attachments/array37.html" title="Example37" width=100% height=100px></iframe>
+      </div>
+      <h2>The Fisher Yates Method</h2>
+      <pre>The above example, array.sort(), is not accurate, it will favor some numbers over the others.
+
+The most popular correct method, is called the Fisher Yates shuffle, and was introduced in data science as early as 1938!
+
+In JavaScript the method can be translated to this:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var points = [40, 100, 1, 5, 25, 10];
+
+for (i = points.length -1; i > 0; i--) {
+  j = Math.floor(Math.random() * i)
+  k = points[i]
+  points[i] = points[j]
+  points[j] = k
+}</pre>
+        <iframe src="Attachments/array38.html" title="Example38" width=100% height=100px></iframe>
+      </div>
+      <h2>Find the Highest (or Lowest) Array Value</h2>
+      <pre>There are no built-in functions for finding the max or min value in an array.
+
+However, after you have sorted an array, you can use the index to obtain the highest and lowest values.
+
+Sorting ascending:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b});
+<b>// now points[0] contains the lowest value</b>
+<b>// and points[points.length-1] contains the highest value</b>
+</pre>
+      </div>
+      <br><p>Sorting a whole array is a very inefficient method if you only want to find the highest (or lowest) value.</p>
+      <h2>Using Math.max() on an Array</h2>
+      <p>You can use <b>Math.max.apply</b> to find the highest number in an array:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+}</pre>
+        <iframe src="Attachments/array39.html" title="Example39" width=100% height=50px></iframe>
+      </div>
+      <p><b>Math.max.apply(null, [1, 2, 3])</b> is equivalent to <b>Math.max(1, 2, 3)</b>.</p>
+      <h2>Using Math.min() on an Array</h2>
+      <p>You can use <b>Math.min.apply</b> to find the lowest number in an array:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>function myArrayMin(arr) {
+  return Math.min.apply(null, arr);
+}</pre>
+        <iframe src="Attachments/array40.html" title="Example40" width=100% height=50px></iframe>
+      </div>
+      <p><b>Math.min.apply(null, [1, 2, 3])</b> is equivalent to <b>Math.min(1, 2, 3)</b>.</p>
+      <h2>Sorting Object Arrays</h2>
+      <p>JavaScript arrays often contain objects:</p>
+      <div class="example">
+        <pre>var cars = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];</pre>
+      </div>
+      <pre>Even if objects have properties of different data types, the <b>sort()</b> method can be used to sort the array.
+
+The solution is to write a compare function to compare the property values:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>cars.sort(function(a, b){return a.year - b.year});</pre>
+        <iframe src="Attachments/array41.html" title="Example41" width=100% height=100px></iframe>
+      </div>
+      <p>Comparing string properties is a little more complex:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>cars.sort(function(a, b){
+  var x = a.type.toLowerCase();
+  var y = b.type.toLowerCase();
+  if (x < y) {return -1;}
+  if (x > y) {return 1;}
+  return 0;
+});</pre>
+        <iframe src="Attachments/array42.html" title="Example42" width=100% height=100px></iframe>
+      </div>
+      <h2>JavaScript Array Iteration Methods</h2>
+      <p>Array iteration methods operate on every array item.</p>
+      <h2>Array.forEach()</h2>
+      <p>The <b>forEach()</b> method calls a function (a callback function) once for each array element.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var txt = "";
+var numbers = [45, 4, 9, 16, 25];
+numbers.forEach(myFunction);
+
+function myFunction(value, index, array) {
+  txt = txt + value + "<br>";
+}</pre>
+        <iframe src="Attachments/array43.html" title="Example43" width=100% height=100px></iframe>
+      </div>
+      <pre>Note that the function takes 3 arguments:
+
+The item value
+The item index
+The array itself
+
+The example above uses only the value parameter. The example can be rewritten to:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var txt = "";
+var numbers = [45, 4, 9, 16, 25];
+numbers.forEach(myFunction);
+
+function myFunction(value) {
+  txt = txt + value + "<br>";
+}</pre>
+        <iframe src="Attachments/array44.html" title="Example44" width=100% height=100px></iframe>
+      </div>
+      <h2>Array.map()</h2>
+      <pre>The <b>map()</b> method creates a new array by performing a function on each array element.
+
+The <b>map()</b> method does not execute the function for array elements without values.
+
+The <b>map()</b> method does not change the original array.
+
+This example multiplies each array value by 2:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var numbers1 = [45, 4, 9, 16, 25];
+var numbers2 = numbers1.map(myFunction);
+
+function myFunction(value, index, array) {
+  return value * 2;
+}</pre>
+        <iframe src="Attachments/array45.html" title="Example45" width=100% height=50px></iframe>
+      </div>
+      <pre>Note that the function takes 3 arguments:
+
+The item value
+The item index
+The array itself
+
+When a callback function uses only the value parameter, the index and array parameters can be omitted:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var numbers1 = [45, 4, 9, 16, 25];
+var numbers2 = numbers1.map(myFunction);
+
+function myFunction(value, index, array) {
+  return value * 2;
+}</pre>
+        <iframe src="Attachments/array46.html" title="Example46" width=100% height=50px></iframe>
+      </div>
+      <h2>Array.filter()</h2>
+      <pre>The <b>filter()</b> method creates a new array with array elements that passes a test.
+
+This example creates a new array from elements with a value larger than 18:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var numbers = [45, 4, 9, 16, 25];
+var over18 = numbers.filter(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}</pre>
+        <iframe src="Attachments/array47.html" title="Example47" width=100% height=50px></iframe>
+      </div>
+      <pre>Note that the function takes 3 arguments:
+
+The item value
+The item index
+The array itself
+
+In the example above, the callback function does not use the index and array parameters, so they can be omitted:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var numbers = [45, 4, 9, 16, 25];
+var over18 = numbers.filter(myFunction);
+
+function myFunction(value) {
+  return value > 18;
+}</pre>
+        <iframe src="Attachments/array48.html" title="Example48" width=100% height=50px></iframe>
+      </div>
+      <h2>Array.reduce()</h2>
+      <pre>The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+
+The reduce() method works from left-to-right in the array. See also reduceRight().
+<b>
+The reduce() method does not reduce the original array.
+</b>
+This example finds the sum of all numbers in an array:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var numbers1 = [45, 4, 9, 16, 25];
+var sum = numbers1.reduce(myFunction);
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}</pre>
+        <iframe src="Attachments/array49.html" title="Example49" width=100% height=50px></iframe>
+      </div>
+      <pre>Note that the function takes 4 arguments:
+
+The total (the initial value / previously returned value)
+The item value
+The item index
+The array itself
+
+The example above does not use the index and array parameters. It can be rewritten to:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var numbers1 = [45, 4, 9, 16, 25];
+var sum = numbers1.reduce(myFunction);
+
+function myFunction(total, value) {
+  return total + value;
+}</pre>
+        <iframe src="Attachments/array50.html" title="Example50" width=100% height=50px></iframe>
+      </div>
+      <p>The <b>reduce()</b> method can accept an initial value:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var numbers1 = [45, 4, 9, 16, 25];
+var sum = numbers1.reduce(myFunction, 100);
+
+function myFunction(total, value) {
+  return total + value;
+}</pre>
+        <iframe src="Attachments/array51.html" title="Example51" width=100% height=50px></iframe>
+      </div>
+      <h2>Array.reduceRight()</h2>
+      <pre>The <b>reduceRight()</b> method runs a function on each array element to produce (reduce it to) a single value.
+
+The <b>reduceRight()</b> works from right-to-left in the array. See also <b>reduce()</b>.
+
+The <b>reduceRight()</b> method does not reduce the original array.
+
+This example finds the sum of all numbers in an array:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var numbers1 = [45, 4, 9, 16, 25];
+var sum = numbers1.reduceRight(myFunction);
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}</pre>
+        <iframe src="Attachments/array52.html" title="Example52" width=100% height=50px></iframe>
+      </div>
+      <pre>Note that the function takes 4 arguments:
+
+The total (the initial value / previously returned value)
+The item value
+The item index
+The array itself
+
+The example above does not use the index and array parameters. It can be rewritten to:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var numbers1 = [45, 4, 9, 16, 25];
+var sum = numbers1.reduceRight(myFunction);
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}</pre>
+        <iframe src="Attachments/array53.html" title="Example53" width=100% height=50px></iframe>
+      </div>
+      <h2>Array.every()</h2>
+      <pre>The <b>every()</b> method check if all array values pass a test.
+
+This example check if all array values are larger than 18:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var numbers1 = [45, 4, 9, 16, 25];
+var sum = numbers1.reduceRight(myFunction);
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}</pre>
+        <iframe src="Attachments/array54.html" title="Example54" width=100% height=50px></iframe>
+      </div>
+      <pre>Note that the function takes 3 arguments:
+
+The item value
+The item index
+The array itself
+
+When a callback function uses the first parameter only (value), the other parameters can be omitted:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var numbers = [45, 4, 9, 16, 25];
+var allOver18 = numbers.every(myFunction);
+
+function myFunction(value) {
+  return value > 18;
+}</pre>
+        <iframe src="Attachments/array55.html" title="Example55" width=100% height=50px></iframe>
+      </div>
+      <h2>Array.some()</h2>
+      <pre>The <b>some()</b> method check if some array values pass a test.
+
+This example check if some array values are larger than 18:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var numbers = [45, 4, 9, 16, 25];
+var someOver18 = numbers.some(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}</pre>
+        <iframe src="Attachments/array56.html" title="Example56" width=100% height=50px></iframe>
+      </div>
+      <pre>Note that the function takes 3 arguments:
+
+The item value
+The item index
+The array itself
+</pre>
+      <h2>Array.indexOf()</h2>
+      <pre>The <b>indexOf()</b> method searches an array for an element value and returns its position.
+
+<b>Note:</b> The first item has position 0, the second item has position 1, and so on.</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Apple", "Orange", "Apple", "Mango"];
+var a = fruits.indexOf("Apple");</pre>
+        <iframe src="Attachments/array57.html" title="Example57" width=100% height=50px></iframe>
+      </div>
+      <pre><b>Array.indexOf()</b> returns -1 if the item is not found.
+
+If the item is present more than once, it returns the position of the first occurrence.</pre>
+      <h2>Array.lastIndexOf()</h2>
+      <p><b>Array.lastIndexOf()</b> is the same as <b>Array.indexOf()</b>, but returns the position of the last occurrence of the specified element.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var fruits = ["Apple", "Orange", "Apple", "Mango"];
+var a = fruits.lastIndexOf("Apple");</pre>
+        <iframe src="Attachments/array58.html" title="Example58" width=100% height=50px></iframe>
+      </div>
+      <h2>Array.find()</h2>
+      <pre>The <b>find()</b> method returns the value of the first array element that passes a test function.
+
+This example finds (returns the value of) the first element that is larger than 18:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var numbers = [4, 9, 16, 25, 29];
+var first = numbers.find(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}</pre>
+        <iframe src="Attachments/array59.html" title="Example59" width=100% height=50px></iframe>
+      </div>
+      <pre>Note that the function takes 3 arguments:
+
+The item value
+The item index
+The array itself</pre>
+      <h2>Array.findIndex()</h2>
+      <pre>The <b>findIndex()</b> method returns the index of the first array element that passes a test function.
+
+This example finds the index of the first element that is larger than 18:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var numbers = [4, 9, 16, 25, 29];
+var first = numbers.findIndex(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}</pre>
+        <iframe src="Attachments/array60.html" title="Example60" width=100% height=50px></iframe>
+      </div>
+      <pre>Note that the function takes 3 arguments:
+
+The item value
+The item index
+The array itself</pre>
+      <div class="example">
+        <h3 align=center>Assignment</h3>
+        <pre>1. var arr = ["Plum","Orange","Donkey","Carrot","JavaScript"]
+Use the above array to demonstarte the use of
+push,pop,join,shift,unshift,sort function
+
+2. Take an array with 10 numbers and sort them in ascending order.</pre>
+      </div>
+      <div class="example">
+        <h3 align=center>Quiz</h3>
+        <iframe src="Attachments/array_quiz.html" title="quiz" width=100% height=600px></iframe>
+      </div>
+</div>
+<ul style="width:90%; overflow:hidden; margin:50px;background-color:white;">
+      <li style="float:left;background-color:red;"><a href="11numbers.html">Prev</a></li>
+      <li style="float:right;background-color:red;"><a href="13dates.html">Next</a></li>
+</body>
+</html>

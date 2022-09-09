@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>JavaScript Math</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      .head {
+        height:100px;
+        font-family: 'Courier New', monospace;
+        color:Yellow;
+        background-color: Black;
+        }
+      ul {
+        float:left;
+        width:13%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: Red;
+        position:sticky;
+        margin-top:15px;
+        }
+      li a{
+        border:1px solid black;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+      li a:hover {
+        background-color:Grey;
+        }
+      img {
+        float:left;
+        width:100px;
+        height:100px;
+        }
+      .body {
+        padding:5px;
+        margin-top:15px;
+        margin-left:15%;
+        margin-right:15%;
+        background-color:LightGrey;
+        font-family: "Trirong", serif;
+        font-size:15px;
+        border:1px solid black;
+        }
+      h2 {
+        font-size:30px;
+        font-family: "Audiowide", sans-serif;
+        text-align: center;
+        }
+      .example {
+        background-color:white;
+        padding:10px;
+        margin:5px;
+        }
+    </style>
+  </head>
+  <body style="background-color:#fce38a;">
+    <div class="head">
+      <h1 style="text-align:center;"><img src="Attachments/logo.png"><br>JAVA SCRIPT TUTORIAL</h>
+    </div>
+    <ul>
+      <li><a href="01home.html">Home</a></li>
+      <li><a href="02statements.html">Statements</a></li>
+      <li><a href="03comments.html">Comments</a></li>
+      <li><a href="04variables.html">Variables</a></li>
+      <li><a href="05operators.html">Operators</a></li>
+      <li><a href="06forms.html">Forms</a></li>
+      <li><a href="07functions.html">Functions</a></li>
+      <li><a href="08objects.html">Objects</a></li>
+      <li><a href="09events.html">Events</a></li>
+      <li><a href="10strings.html">Strings</a></li>
+      <li><a href="11numbers.html">Numbers</a></li>
+      <li><a href="12arrays.html">Arrays</a></li>
+      <li><a href="13dates.html">Dates</a></li>
+      <li style="background-color: #111;"><a href="14math.html">Math</a></li>
+      <li><a href="15conditions.html">Conditions</a></li>
+      <li><a href="16loops.html">Loops</a></li>
+      <li><a href="17regexp.html">Regexp</a></li>
+      <li><a href="18errors.html">Errors</a></li>
+      <li><a href="19this.html">this.</a></li>
+      <li><a href="20let.html">Let</a></li>
+      <li><a href="21const.html">Const.</a></li>
+      <li><a href="22classes.html">Classes</a></li>
+      <li><a href="23debugging.html">Debugging</a></li>
+    </ul>
+    <div class="body">
+      <h2>JavaScript Math Object</h2>
+      <p>The JavaScript Math object allows you to perform mathematical tasks on numbers.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Math.PI;         <b>//returns 3.141592653589793</b></pre>
+      </div>
+      <h2>Math.round()</h2>
+      <p><b>Math.round(x)</b> returns the value of <b>x</b> rounded to its nearest integer:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Math.round(4.7);    <b>// returns 5</b>
+Math.round(4.4);    <b>// returns 4</b></pre>
+        <iframe src="Attachments/math1.html" title="Example1" width=100% height=100px></iframe>
+      </div>
+      <h2>Math.pow()</h2>
+      <p><b>Math.pow(x, y)</b> returns the value of x to the power of y:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Math.pow(8, 2);      <b>// returns 64</b></pre>
+        <iframe src="Attachments/math2.html" title="Example2" width=100% height=50px></iframe>
+      </div>
+      <h2>Math.sqrt()</h2>
+      <p><b>Math.sqrt(x)</b> returns the square root of x:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Math.sqrt(64);      <b>// returns 8</b></pre>
+        <iframe src="Attachments/math3.html" title="Example3" width=100% height=50px></iframe>
+      </div>
+      <h2>Math.abs()</h2>
+      <p><b>Math.abs(x)</b> returns absolute(positive) value of x:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Math.abs(-4.7);      <b>// returns 4.7</b></pre>
+        <iframe src="Attachments/math4.html" title="Example4" width=100% height=50px></iframe>
+      </div>
+      <h2>Math.ceil()</h2>
+      <p><b>Math.ceil(x)</b> returns the value of x rounded <b>up</b> to its nearest integer:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Math.ceil(4.4);      <b>// returns 5</b></pre>
+        <iframe src="Attachments/math5.html" title="Example5" width=100% height=50px></iframe>
+      </div>
+      <h2>Math.floor()</h2>
+      <p><b>Math.floor(x)</b> returns the value of x rounded <b>down</b> to its nearest integer:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Math.floor(4.7);      <b>// returns 4</b></pre>
+        <iframe src="Attachments/math6.html" title="Example6" width=100% height=50px></iframe>
+      </div>
+      <h2>Math.sin()</h2>
+      <pre><b>Math.sin(x)</b> returns the sine (a value between -1 and 1) of the angle x (given in radians).
+
+If you want to use degrees instead of radians, you have to convert degrees to radians:
+
+Angle in radians = Angle in degrees x PI / 180.</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Math.sin(90 * Math.PI / 180);     <b>// returns 1 (the sine of 90 degrees)</b></pre>
+        <iframe src="Attachments/math7.html" title="Example7" width=100% height=50px></iframe>
+      </div>
+      <h2>Math.cos()</h2>
+      <pre><b>Math.cos(x)</b> returns the cosine (a value between -1 and 1) of the angle x (given in radians).
+
+If you want to use degrees instead of radians, you have to convert degrees to radians:
+
+Angle in radians = Angle in degrees x PI / 180.</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Math.cos(0 * Math.PI / 180);     <b>// returns 1 (the cos of 0 degrees)</b></pre>
+        <iframe src="Attachments/math8.html" title="Example8" width=100% height=50px></iframe>
+      </div>
+      <h2>Math.min() and Math.max()</h2>
+      <p><b>Math.min()</b> and <b>Math.max()</b> can be used to find the lowest or highest value in a list of arguments:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Math.min(0, 150, 30, 20, -8, -200);  <b>// returns -200</b></pre>
+        <iframe src="Attachments/math9.html" title="Example9" width=100% height=50px></iframe>
+        <pre>Math.max(0, 150, 30, 20, -8, -200);  <b>// returns 150</b></pre>
+        <iframe src="Attachments/math10.html" title="Example10" width=100% height=50px></iframe>
+      </div>
+      <h2>Math.random()</h2>
+      <p><b>Math.random()</b> returns a random number between 0 (inclusive), and 1 (exclusive):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Math.random();      <b>// returns a random number</b></pre>
+        <iframe src="Attachments/math11.html" title="Example11" width=100% height=50px></iframe>
+      </div>
+      <h2>Math Properties (Constants)</h2>
+      <p>JavaScript provides 8 mathematical constants that can be accessed with the Math object:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Math.E        <b>// returns Euler's number</b>
+Math.PI       <b>// returns PI</b>
+Math.SQRT2    <b>// returns the square root of 2</b>
+Math.SQRT1_2  <b>// returns the square root of 1/2</b>
+Math.LN2      <b>// returns the natural logarithm of 2</b>
+Math.LN10     <b>// returns the natural logarithm of 10</b>
+Math.LOG2E    <b>// returns base 2 logarithm of E</b>
+Math.LOG10E   <b>// returns base 10 logarithm of E</b></pre>
+      </div>
+      <h2>Math Constructor</h2>
+      <pre>Unlike other global objects, the Math object has no constructor. Methods and properties are static.
+
+All methods and properties (constants) can be used without creating a Math object first.</pre>
+      <h2>Math Object Methods</h2>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>abs(x)</td>
+          <td>Returns the absolute value of x</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>acos(x)</td>
+          <td>Returns the arccosine of x, in radians</td>
+        </tr>
+        <tr>
+          <td>acosh(x)</td>
+          <td>Returns the hyperbolic arccosine of x</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>asin(x)</td>
+          <td>Returns the arcsine of x, in radians</td>
+        </tr>
+        <tr>
+          <td>asinh(x)</td>
+          <td>Returns the hyperbolic arcsine of x</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>atan(x)</td>
+          <td>Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians</td>
+        </tr>
+        <tr>
+          <td>atan2(x,y)</td>
+          <td>Returns the arctangent of the quotient of its arguments</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>atanh(x)</td>
+          <td>Returns the hyperbolic arctangent of x</td>
+        </tr>
+        <tr>
+          <td>cbrt(x)</td>
+          <td>Returns the cubic root of x</td>
+        </tr>
+        <tr style="background-color:white;">
+        <td>ceil(x)</td>
+        <td>Returns x, rounded upwards to the nearest integer</td>
+        </tr>
+        <tr>
+          <td>cos(x)</td>
+          <td>Returns the cosine of x (x is in radians)</td>
+        </tr>
+        <tr style="background-color:white;">
+        <td>cosh(x)</td>
+        <td>Returns the hyperbolic cosine of x</td>
+        </tr>
+        <tr>
+          <td>exp(x)</td>
+          <td>Returns the value of Ex</td>
+        </tr>
+        <tr style="background-color:white;">
+        <td>floor(x)</td>
+        <td>Returns x, rounded downwards to the nearest integer</td>
+        </tr>
+        <tr>
+          <td>log(x)</td>
+          <td>Returns the natural logarithm (base E) of x</td>
+        </tr>
+        <tr style="background-color:white;">
+        <td>max(x, y, z, ..., n)</td>
+        <td>Returns the number with the highest value</td>
+        </tr>
+        <tr>
+          <td>min(x, y, z, ..., n)</td>
+          <td>Returns the number with the lowest value</td>
+        </tr>
+        <tr style="background-color:white;">
+        <td>pow(x,y)</td>
+        <td>Returns the value of x to the power of y</td>
+        </tr>
+        <tr>
+          <td>random()</td>
+          <td>Returns a random number between 0 and 1</td>
+        </tr>
+        <tr style="background-color:white;">
+        <td>round(x)</td>
+        <td>Rounds x to the nearest integer</td>
+        </tr>
+        <tr>
+          <td>sin(x)</td>
+          <td>Returns the sine of x (x is in radians)</td>
+        </tr>
+        <tr style="background-color:white;">
+        <td>sinh(x)</td>
+        <td>Returns the hyperbolic sine of x</td>
+        </tr>
+        <tr>
+          <td>sqrt(x)</td>
+          <td>Returns the square root of x</td>
+        </tr>
+        <tr style="background-color:white;">
+        <td>tan(x)</td>
+        <td>Returns the tangent of an angle</td>
+        </tr>
+        <tr>
+          <td>tanh(x)</td>
+          <td>Returns the hyperbolic tangent of a number</td>
+        </tr>
+        <tr style="background-color:white;">
+        <td>trunc(x)</td>
+        <td>Returns the integer part of a number (x)</td>
+        </tr>
+      </table>
+      <div class="example">
+        <h3 align=center>Assignment</h3>
+        <pre>1. Convert a positive floating-point value or arithmetic expression to a currency format. Take the
+input from a user.
+
+2. Convert a decimal number to hexadecimal number and display it. Take the input from user</pre>
+      </div>
+      <div class="example">
+        <h3 align = "center">Quiz</h3>
+        <iframe src="Attachments/math_quiz.html" title="quiz" width=100% height=600px></iframe>
+      </div>
+</div>
+<ul style="width:90%; overflow:hidden; margin:50px;background-color:white;">
+      <li style="float:left;background-color:red;"><a href="13dates.html">Prev</a></li>
+      <li style="float:right;background-color:red;"><a href="15conditions.html">Next</a></li>
+</body>
+</html>

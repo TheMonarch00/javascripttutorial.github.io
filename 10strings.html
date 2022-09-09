@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>JavaScript Strings</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      .head {
+        height:100px;
+        font-family: 'Courier New', monospace;
+        color:Yellow;
+        background-color: Black;
+        }
+      ul {
+        float:left;
+        width:13%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: Red;
+        position:sticky;
+        margin-top:15px;
+        }
+      li a{
+        border:1px solid black;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+      li a:hover {
+        background-color:Grey;
+        }
+      img {
+        float:left;
+        width:100px;
+        height:100px;
+        }
+      .body {
+        padding:5px;
+        margin-top:15px;
+        margin-left:15%;
+        margin-right:15%;
+        background-color:LightGrey;
+        font-family: "Trirong", serif;
+        font-size:15px;
+        border:1px solid black;
+        }
+      h2 {
+        font-size:30px;
+        font-family: "Audiowide", sans-serif;
+        text-align: center;
+        }
+      .example {
+        background-color:white;
+        padding:10px;
+        margin:5px;
+        }
+    </style>
+  </head>
+  <body style="background-color:#fce38a;">
+    <div class="head">
+      <h1 style="text-align:center;"><img src="Attachments/logo.png"><br>JAVA SCRIPT TUTORIAL</h>
+    </div>
+    <ul>
+      <li><a href="01home.html">Home</a></li>
+      <li><a href="02statements.html">Statements</a></li>
+      <li><a href="03comments.html">Comments</a></li>
+      <li><a href="04variables.html">Variables</a></li>
+      <li><a href="05operators.html">Operators</a></li>
+      <li><a href="06forms.html">Forms</a></li>
+      <li><a href="07functions.html">Functions</a></li>
+      <li><a href="08objects.html">Objects</a></li>
+      <li><a href="09events.html">Events</a></li>
+      <li style="background-color: #111;"><a href="10strings.html">Strings</a></li>
+      <li><a href="11numbers.html">Numbers</a></li>
+      <li><a href="12arrays.html">Arrays</a></li>
+      <li><a href="13dates.html">Dates</a></li>
+      <li><a href="14math.html">Math</a></li>
+      <li><a href="15conditions.html">Conditions</a></li>
+      <li><a href="16loops.html">Loops</a></li>
+      <li><a href="17regexp.html">Regexp</a></li>
+      <li><a href="18errors.html">Errors</a></li>
+      <li><a href="19this.html">this.</a></li>
+      <li><a href="20let.html">Let</a></li>
+      <li><a href="21const.html">Const.</a></li>
+      <li><a href="22classes.html">Classes</a></li>
+      <li><a href="23debugging.html">Debugging</a></li>
+    </ul>
+    <div class="body">
+      <h2>JavaScript Strings</h2>
+      <p>JavaScript strings are used for storing and manipulating text.</p>
+      <p>A JavaScript string is zero or more characters written inside quotes.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x = "JavaScript"</pre>
+      </div>
+      <p>You can use single or double quotes:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var carName1 = "Volvo XC60";  <b>// Double quotes</b>
+var carName2 = 'Volvo XC60';  <b>// Single quotes</b>
+</pre>
+      </div>
+      <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var answer1 = "It's alright";
+var answer2 = "He is called 'Johnny'";
+var answer3 = 'He is called "Johnny"';</pre>
+      </div>
+      <h2>Escape Character</h2>
+      <p>Because strings must be written within quotes, JavaScript will misunderstand this string:</p>
+      <div class="example">
+        <p>var x = "We are the so-called "Vikings" from the north.";</p>
+      </div>
+      <pre>The string will be chopped to "We are the so-called ".
+
+The solution to avoid this problem, is to use the <b>backslash escape character.</b>
+
+The backslash (\) escape character turns special characters into string characters:</pre>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Code</th>
+          <th>Result</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>\'</td>
+          <td>'</td>
+          <td>Single quote</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>\"</td>
+          <td>"</td>
+          <td>Double quote</td>
+        </tr>
+        <tr>
+          <td>\\</td>
+          <td>\</td>
+          <td>Backslash</td>
+        </tr>
+      </table>
+      <p>The sequence <b>\"</b>  inserts a double quote in a string:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x = "We are the so-called \"Vikings\" from the north.";</pre>
+        <iframe src="Attachments/string1.html" title="Example1" width=100% height=50px></iframe>
+      </div>
+      <p>The sequence <b>\'</b>  inserts a single quote in a string:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x = 'It\'s alright.';</pre>
+        <iframe src="Attachments/string2.html" title="Example2" width=100% height=50px></iframe>
+      </div>
+      <p>The sequence <b>\\</b>  inserts a Backslash in a string:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x = "The character \\ is called backslash.";</pre>
+        <iframe src="Attachments/string3.html" title="Example3" width=100% height=50px></iframe>
+      </div>
+      <p>Six other escape sequences are valid in JavaScript:</p>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Code</th>
+          <th>Result</th>
+        </tr>
+        <tr>
+          <td>\b</td>
+          <td>Backspace</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>\f</td>
+          <td>Form Feed</td>
+        </tr>
+        <tr>
+          <td>\n</td>
+          <td>New Line</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>\r</td>
+          <td>Carriage Return</td>
+        </tr>
+        <tr>
+          <td>\t</td>
+          <td>Horizontal Tabulator</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>\v</td>
+          <td>Vertical Tabulator</td>
+        </tr>
+      </table>
+      <p>The 6 escape characters above were originally designed to control typewriters, teletypes, and fax machines. They do not make any sense in HTML.</p>
+      <h2>Breaking Long Code Lines</h2>
+      <pre>For best readability, programmers often like to avoid code lines longer than 80 characters.
+
+If a JavaScript statement does not fit on one line, the best place to break it is after an operator:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>document.getElementById("demo").innerHTML =
+"Hello World!";</pre>
+        <iframe src="Attachments/string4.html" title="Example4" width=100% height=50px></iframe>
+      </div>
+      <p>You can also break up a code line <b>within a text string</b> with a single backslash:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>document.getElementById("demo").innerHTML = "Hello \
+World!";</pre>
+        <iframe src="Attachments/string5.html" title="Example5" width=100% height=50px></iframe>
+      </div>
+      <pre>The \ method is not the preferred method. It might not have universal support.
+Some browsers do not allow spaces behind the \ character.</pre>
+      <p>A safer way to break up a string, is to use string addition:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>document.getElementById("demo").innerHTML = "Hello " +
+"World!";</pre>
+        <iframe src="Attachments/string6.html" title="Example6" width=100% height=50px></iframe>
+      </div>
+      <p>You cannot break up a code line with a backslash</p>
+      <h2Strings Can be Objects</h2>
+      <pre>Normally, JavaScript strings are primitive values, created from literals:
+
+<b>var firstName = "John";</b>
+
+But strings can also be defined as objects with the keyword new:
+
+<b>var firstName = new String("John");</b></pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x = "John";
+var y = new String("John");
+
+<b>// typeof x will return string</b>
+<b>// typeof y will return object</b></pre>
+      </div>
+      <pre><b>Don't create strings as objects. It slows down execution speed.
+The " new " keyword complicates the code. This can produce some unexpected results:</b>
+
+When using the <b>==</b> operator, equal strings are equal:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x = "John";             
+var y = new String("John");
+<b>
+// (x == y) is true because x and y have equal values</b>
+</pre>
+      </div>
+      <p>When using the <b>===</b> operator, equal strings are not equal, because the <b>===</b> operator expects equality in both type and value.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x = "John";             
+var y = new String("John");
+<b>
+// (x === y) is false because x and y have different types (string and object)</b></pre>
+      </div>
+      <p>Objects cannot be compared:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x = new String("John");             
+var y = new String("John");
+<b>
+// (x == y) is false because x and y are different objects</b></pre>
+      </div>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x = new String("John");             
+var y = new String("John");
+<b>
+// (x === y) is false because x and y are different objects</b></pre>
+      </div>
+      <pre><em>Note the difference between <b>(x==y)</b> and <b>(x===y)</b>.
+Comparing two JavaScript objects will <b>always</b> return <b>false.</b></em></pre>
+      <h2>String Methods and Properties</h2>
+      <pre>Primitive values, like "John Doe", cannot have properties or methods (because they are not objects).
+
+But with JavaScript, methods and properties are also available to primitive values, because JavaScript
+treats primitive values as objects when executing methods and properties.</pre>
+      <h2>String Length</h2>
+      <p>The <b>length</b> property returns the length of a string:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var sln = txt.length;</pre>
+        <iframe src="Attachments/string7.html" title="Example7" width=100% height=50px></iframe>
+      </div>
+      <h2>Finding a String in a String</h2>
+      <p>The <b>indexOf()</b> method returns the index of (the position of) the <b>first</b> occurrence of a specified text in a string:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate");</pre>
+        <iframe src="Attachments/string8.html" title="Example8" width=100% height=50px></iframe>
+      </div>
+      <pre>JavaScript counts positions from zero.
+0 is the first position in a string, 1 is the second, 2 is the third ...</pre>
+      <p>The <b>lastIndexOf()</b> method returns the index of the <b>last</b> occurrence of a specified text in a string:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "Please locate where 'locate' occurs!";
+var pos = str.lastIndexOf("locate");</pre>
+        <iframe src="Attachments/string9.html" title="Example9" width=100% height=50px></iframe>
+      </div>
+      <p>Both <b>indexOf()</b>, and <b>lastIndexOf()</b> return <b>-1</b> if the text is not found.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "Please locate where 'locate' occurs!";
+var pos = str.lastIndexOf("John");</pre>
+        <iframe src="Attachments/string10.html" title="Example10" width=100% height=50px></iframe>
+      </div>
+      <p>Both methods accept a second parameter as the starting position for the search:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate", 15);</pre>
+        <iframe src="Attachments/string11.html" title="Example11" width=100% height=50px></iframe>
+      </div>
+      <p>The <b>lastIndexOf()</b> methods searches backwards (from the end to the beginning), meaning: if the second parameter is <b>15</b>, the search starts at position <b>15</b>, and searches to the beginning of the string.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "Please locate where 'locate' occurs!";
+var pos = str.lastIndexOf("locate", 15);</pre>
+        <iframe src="Attachments/string12.html" title="Example12" width=100% height=50px></iframe>
+      </div>
+      <h2>Searching for a String in a String</h2>
+      <p>The <b>search()</b> method searches a string for a specified value and returns the position of the match:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "Please locate where 'locate' occurs!";
+var pos = str.search("locate");</pre>
+        <iframe src="Attachments/string13.html" title="Example13" width=100% height=50px></iframe>
+      </div>
+      <h2>Did You Notice?</h2>
+      <pre>The two methods, <b>indexOf()</b> and <b>search()</b>, are equal?
+
+They accept the same arguments (parameters), and return the same value?
+
+The two methods are NOT equal. These are the differences:
+
+The <b>search()</b> method cannot take a second start position argument.
+The <b>indexOf()</b> method cannot take powerful search values (regular expressions).</pre>
+      <h2>Extracting String Parts</h2>
+      <pre>There are 3 methods for extracting a part of a string:
+<b>
+slice(start, end)
+substring(start, end)
+substr(start, length)</b></pre>
+      <h2>The slice() Method</h2>
+      <pre><b>slice()</b> extracts a part of a string and returns the extracted part in a new string.
+
+The method takes 2 parameters: the start position, and the end position (end not included).
+
+This example slices out a portion of a string from position 7 to position 12 (13-1):</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "Apple, Banana, Kiwi";
+var res = str.slice(7, 13);
+
+The result of res will be:</pre>
+        <iframe src="Attachments/string14.html" title="Example14" width=100% height=50px></iframe>
+      </div>
+      <pre><b>Remember: JavaScript counts positions from zero. First position is 0.</b>
+
+If a parameter is negative, the position is counted from the end of the string.
+
+This example slices out a portion of a string from position -12 to position -6:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "Apple, Banana, Kiwi";
+var res = str.slice(7, 13);
+
+The result of res will be:</pre>
+        <iframe src="Attachments/string15.html" title="Example15" width=100% height=50px></iframe>
+      </div>
+      <p>If you omit the second parameter, the method will slice out the rest of the string:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var res = str.slice(7);</pre>
+        <iframe src="Attachments/string16.html" title="Example16" width=100% height=50px></iframe>
+      </div>
+      <p>or, counting from the end:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var res = str.slice(-12);</pre>
+        <iframe src="Attachments/string17.html" title="Example17" width=100% height=50px></iframe>
+      </div>
+      <h2>The substring() Method</h2>
+      <pre><b>substring()</b> is similar to <b>slice()</b>.
+
+The difference is that <b>substring()</b> cannot accept negative indexes.</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "Apple, Banana, Kiwi";
+var res = str.substring(7, 13);
+The result of res will be:</pre>
+        <iframe src="Attachments/string18.html" title="Example18" width=100% height=50px></iframe>
+      </div>
+      <p>If you omit the second parameter, <b>substring()</b> will slice out the rest of the string.</p>
+      <h2>The substr() Method</h2>
+      <pre><b>substr()</b> is similar to <b>slice()</b>.
+
+The difference is that the second parameter specifies the <b>length</b> of the extracted part.</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "Apple, Banana, Kiwi";
+var res = str.substr(7, 6);
+The result of res will be:</pre>
+        <iframe src="Attachments/string19.html" title="Example19" width=100% height=50px></iframe>
+      </div>
+      <p>If you omit the second parameter, <b>substr()</b> will slice out the rest of the string.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "Apple, Banana, Kiwi";
+var res = str.substr(7);
+The result of res will be:</pre>
+        <iframe src="Attachments/string20.html" title="Example20" width=100% height=50px></iframe>
+      </div>
+      <p>If the first parameter is negative, the position counts from the end of the string.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "Apple, Banana, Kiwi";
+var res = str.substr(-4);
+The result of res will be:</pre>
+        <iframe src="Attachments/string21.html" title="Example21" width=100% height=50px></iframe>
+      </div>
+      <h2>Replacing String Content</h2>
+      <p>The <b>replace()</b> method replaces a specified value with another value in a string:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>str = "Let's learn HTML";
+var n = str.replace("HTML", "JavaScript");</pre>
+        <iframe src="Attachments/string22.html" title="Example22" width=100% height=100px></iframe>
+      </div>
+      <p>The <b>replace()</b> method does not change the string it is called on. It returns a new string.</p>
+      <p>By default, the replace() method is case sensitive.</p>
+      <p>To replace case insensitive, use a <b>regular expression</b> with an <b>/i</b> flag (insensitive):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>str = "Let's learn HTML";
+var n = str.replace(/html/i, "JavaScript");</pre>
+        <iframe src="Attachments/string23.html" title="Example23" width=100% height=100px></iframe>
+      </div>
+      <p>Note that <b>regular expressions</b> are written without quotes.</p>
+      <h2>Converting to Upper and Lower Case</h2>
+      <p>A string is converted to upper case with <b>toUpperCase()</b>:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var text1 = "Hello World!";       // String
+var text2 = text1.toUpperCase();  // text2 is text1 converted to upper</pre>
+        <iframe src="Attachments/string24.html" title="Example24" width=100% height=100px></iframe>
+      </div>
+      <p>A string is converted to lower case with <b>toLowerCase()</b>:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var text1 = "Hello World!";       // String
+var text2 = text1.toLowerCase();  // text2 is text1 converted to lower</pre>
+        <iframe src="Attachments/string25.html" title="Example25" width=100% height=100px></iframe>
+      </div>
+      <h2>The concat() Method</h2>
+      <p><b>concat()</b> joins two or more strings:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var text1 = "Hello";
+var text2 = "World";
+var text3 = text1.concat(" ", text2);</pre>
+        <iframe src="Attachments/string26.html" title="Example26" width=100% height=50px></iframe>
+      </div>
+      <pre>
+All string methods return a new string. They don't modify the original string.
+Formally said: Strings are immutable: Strings cannot be changed, only replaced.
+</pre>
+      <h2>String.trim()</h2>
+      <p>The <b>trim()</b> method removes whitespace from both sides of a string:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "       Hello World!        ";
+alert(str.trim());</pre>
+        <iframe src="Attachments/string27.html" title="Example27" width=100% height=50px></iframe>
+      </div>
+      <h2>JavaScript String Padding</h2>
+      <p>ECMAScript 2017 added two String methods: <b>padStart</b> and <b>padEnd</b> to support padding at the beginning and at the end of a string.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>let str = "5";
+str = str.padStart(4,0);</pre>
+        <iframe src="Attachments/string28.html" title="Example28" width=100% height=50px></iframe>
+      </div>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>let str = "5";
+str = str.padEnd(4,0);</pre>
+        <iframe src="Attachments/string29.html" title="Example29" width=100% height=50px></iframe>
+      </div>
+      <h2>Extracting String Characters</h2>
+      <pre>There are 3 methods for extracting string characters:
+
+	<b>charAt(position)
+	charCodeAt(position)
+	Property access [ ]</b></pre>
+      <h2>The charAt() Method</h2>
+      <p>The <b>charAt()</b> method returns the character at a specified index (position) in a string:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "HELLO WORLD";
+str.charAt(0);            // returns H</pre>
+        <iframe src="Attachments/string30.html" title="Example30" width=100% height=50px></iframe>
+      </div>
+      <h2>The charCodeAt() Method</h2>
+      <pre>The <b>charCodeAt()</b> method returns the unicode of the character at a specified index in a string:
+
+The method returns a UTF-16 code (an integer between 0 and 65535).</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "HELLO WORLD";
+str.charCodeAt(0);            // returns 72</pre>
+        <iframe src="Attachments/string31.html" title="Example31" width=100% height=50px></iframe>
+      </div>
+      <h2>Property Access</h2>
+      <p>ECMAScript 5 (2009) allows property access [ ] on strings:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "HELLO WORLD";
+str[0];            // returns H</pre>
+        <iframe src="Attachments/string32.html" title="Example32" width=100% height=50px></iframe>
+      </div>
+      <pre>Property access might be a little <b>unpredictable</b>:
+
+It does not work in Internet Explorer 7 or earlier
+It makes strings look like arrays (but they are not)
+If no character is found, [ ] returns undefined, while charAt() returns an empty string.
+It is read only. str[0] = "A" gives no error (but does not work!)</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var str = "HELLO WORLD";
+str[0] = "A";             // Gives no error, but does not work
+str[0];                   // returns H</pre>
+        <iframe src="Attachments/string33.html" title="Example33" width=100% height=50px></iframe>
+      </div>
+      <h2>Converting a String to an Array</h2>
+      <p>A string can be converted to an array with the <b>split()</b> method:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var txt = "a,b,c,d,e";   // String
+txt.split(",");          // Split on commas
+txt.split(" ");          // Split on spaces
+txt.split("|");          // Split on pipe</pre>
+        <iframe src="Attachments/string34.html" title="Example34" width=100% height=100px></iframe>
+      </div>
+      <pre>If the separator is omitted, the returned array will contain the whole string in index [0].
+
+If the separator is "", the returned array will be an array of single characters:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var txt = "Hello";       // String
+txt.split("");           // Split in characters</pre>
+        <iframe src="Attachments/string35.html" title="Example35" width=100% height=100px></iframe>
+      </div>
+      <div class="example">
+        <h3 align=center>Assignment</h3>
+        <pre>1. Take an input from user and print the no. of vowels in it.
+
+2. Take fullname as an input and split it into firstname and last name.
+
+3. Take a string sentence as an input and count no of articles (a, an, the) in it.
+</pre>
+      </div>
+      <div class="example">
+        <h3 align=center>Quiz</h3>
+        <iframe src="Attachments/string_quiz.html" title="quiz" width=100% height=600px></iframe>
+      </div>
+</div>
+<ul style="width:90%; overflow:hidden; margin:50px;background-color:white;">
+      <li style="float:left;background-color:red;"><a href="09events.html">Prev</a></li>
+      <li style="float:right;background-color:red;"><a href="11numbers.html">Next</a></li>
+</body>
+</html>

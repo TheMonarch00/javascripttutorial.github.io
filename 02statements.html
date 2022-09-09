@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>JavaScript Statements</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      .head {
+        height:100px;
+        font-family: 'Courier New', monospace;
+        color:Yellow;
+        background-color: Black;
+        }
+      ul {
+        float:left;
+        width:13%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: Red;
+        position:sticky;
+        margin-top:15px;
+        }
+      li a{
+        border:1px solid black;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+      li a:hover {
+        background-color:Grey;
+        }
+      img {
+        float:left;
+        width:100px;
+        height:100px;
+        }
+      .body {
+        padding:5px;
+        margin-top:15px;
+        margin-left:15%;
+        margin-right:15%;
+        background-color:LightGrey;
+        font-family: "Trirong", serif;
+        font-size:15px;
+        border:1px solid black;
+        }
+      h2 {
+        font-size:30px;
+        font-family: "Audiowide", sans-serif;
+        text-align: center;
+        }
+      .example {
+        background-color:white;
+        padding:10px;
+        margin:5px;
+        }
+    </style>
+  </head>
+  <body style="background-color:#fce38a;">
+    <div class="head">
+      <h1 style="text-align:center;"><img src="Attachments/logo.png"><br>JAVA SCRIPT TUTORIAL</h>
+    </div>
+    <ul>
+      <li><a href="01home.html">Home</a></li>
+      <li style="background-color: #111;"><a href="02statements.html">Statements</a></li>
+      <li><a href="03comments.html">Comments</a></li>
+      <li><a href="04variables.html">Variables</a></li>
+      <li><a href="05operators.html">Operators</a></li>
+      <li><a href="06forms.html">Forms</a></li>
+      <li><a href="07functions.html">Functions</a></li>
+      <li><a href="08objects.html">Objects</a></li>
+      <li><a href="09events.html">Events</a></li>
+      <li><a href="10strings.html">Strings</a></li>
+      <li><a href="11numbers.html">Numbers</a></li>
+      <li><a href="12arrays.html">Arrays</a></li>
+      <li><a href="13dates.html">Dates</a></li>
+      <li><a href="14math.html">Math</a></li>
+      <li><a href="15conditions.html">Conditions</a></li>
+      <li><a href="16loops.html">Loops</a></li>
+      <li><a href="17regexp.html">Regexp</a></li>
+      <li><a href="18errors.html">Errors</a></li>
+      <li><a href="19this.html">this.</a></li>
+      <li><a href="20let.html">Let</a></li>
+      <li><a href="21const.html">Const.</a></li>
+      <li><a href="22classes.html">Classes</a></li>
+      <li><a href="23debugging.html">Debugging</a></li>
+    </ul>
+    <div class="body">
+      <h2>JavaScript Statements</h2>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x, y, z;    // Statement 1
+x = 5;          // Statement 2
+y = 6;          // Statement 3
+z = x + y;      // Statement 4</pre>
+      </div>
+      <h2>JavaScript Programs</h2>
+      <pre>
+A <b>computer program</b> is a list of "instructions" to be "executed" by a computer.
+
+In a programming language, these programming instructions are called <b>statements</b>.
+
+A <b>JavaScript program</b> is a list of <b>programming statements</b>.
+
+<em>In HTML, JavaScript programs are executed by the web browser.</em></pre>
+      <h2>JavaScript Statements</h2>
+      <pre>JavaScript statements are composed of:
+
+Values, Operators, Expressions, Keywords, and Comments.
+
+This statement tells the browser to write "Hello World." inside an HTML element with id="demo":</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <p>document.getElementById("demo").innerHTML = "Hello World.";</p>
+      </div>
+      <pre>Most JavaScript programs contain many JavaScript statements.
+
+The statements are executed, one by one, in the same order as they are written.
+
+<em>JavaScript programs (and JavaScript statements) are often called JavaScript code.</em></pre>
+      <h2>Semicolons ;</h2>
+      <pre>Semicolons separate JavaScript statements.
+
+Add a semicolon at the end of each executable statement:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var a, b, c;     // Declare 3 variables
+a = 5;           // Assign the value 5 to a
+b = 6;           // Assign the value 6 to b
+c = a + b;       // Assign the sum of a and b to c</pre>
+      </div>
+      <p>When separated by semicolons, multiple statements on one line are allowed:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>a = 5; b = 6; c = a + b;</pre>
+      </div>
+      <pre><em>On the web, you might see examples without semicolons.
+Ending statements with semicolon is not required, but highly recommended.</em></pre>
+      <h2>JavaScript White Space</h2>
+      <pre>JavaScript ignores multiple spaces. You can add white space to your script to make it more readable.
+</pre>
+      <div class="example">
+        <h3>The following lines are equivalent:</h3>
+        <pre>var person = "Hege";
+var person="Hege";</pre>
+      </div><br>
+      <h2>JavaScript Line Length and Line Breaks</h2>
+      <pre>For best readability, programmers often like to avoid code lines longer than 80 characters.
+
+If a JavaScript statement does not fit on one line, the best place to break it is after an operator:</pre>
+      <div class="example">
+        <h3 align=center>Example</h3>
+        <pre>document.getElementById("demo").innerHTML =
+"Hello Dolly!";</pre>
+      </div>
+      <h2>JavaScript Code Blocks</h2>
+      <pre>JavaScript statements can be grouped together in code blocks, inside curly brackets {...}.
+
+The purpose of code blocks is to define statements to be executed together.
+
+One place you will find statements grouped together in blocks, is in JavaScript functions:</pre>
+      <div class="example">
+        <h3 align=center>Example</h3>
+        <pre>function myFunction() {
+  document.getElementById("demo1").innerHTML = "Hello Dolly!";
+  document.getElementById("demo2").innerHTML = "How are you?";
+}</pre>
+      </div>
+      <h2>JavaScript Keywords</h2>
+      <pre>JavaScript statements often start with a keyword to identify the JavaScript action to be performed.
+
+Visit our Reserved Words reference to view a full list of JavaScript keywords.
+
+Here is a list of some of the keywords you will learn about in this tutorial:</pre>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Keyword</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>break</td>
+          <td>Terminates a switch or a loop</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>continue</td>
+          <td>Jumps out of a loop and starts at the top</td>
+        </tr>
+        <tr>
+          <td>debugger</td>
+          <td>Stops the execution of JavaScript, and calls (if available) the debugging function</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>do ... while</td>
+          <td>Executes a block of statements, and repeats the block, while a condition is true</td>
+        </tr>
+        <tr>
+          <td>for</td>
+          <td>Marks a block of statements to be executed, as long as a condition is true</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>function</td>
+          <td>Declares a function</td>
+        </tr>
+        <tr>
+          <td>if ... else</td>
+          <td>Marks a block of statements to be executed, depending on a condition</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>return</td>
+          <td>Exits a function</td>
+        </tr>
+        <tr>
+          <td>switch</td>
+          <td>Marks a block of statements to be executed, depending on different cases</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>try ... catch</td>
+          <td>Implements error handling to a block of statements</td>
+        </tr>
+        <tr>
+          <td>var</td>
+          <td>Declares a variable</td>
+        </tr>
+      </table>
+      <em>JavaScript keywords are reserved words. Reserved words cannot be used as names for variables.</em>
+      <div class="example">
+        <h3 align=center>Assignment</h3>
+        <pre>1. Write a JavaScript code to add, subtract, multiply, divide two numbers and print the results.</pre>
+      </div>
+</div>
+<ul style="width:90%; overflow:hidden; margin:50px;background-color:white;">
+      <li style="float:left;background-color:red;"><a href="01home.html">Prev</a></li>
+      <li style="float:right;background-color:red;"><a href="03comments.html">Next</a></li>
+</ul>
+</body>
+</html>

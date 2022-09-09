@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>JavaScript Operators</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      .head {
+        height:100px;
+        font-family: 'Courier New', monospace;
+        color:Yellow;
+        background-color: Black;
+        }
+      ul {
+        float:left;
+        width:13%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: Red;
+        position:sticky;
+        margin-top:15px;
+        }
+      li a{
+        border:1px solid black;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+      li a:hover {
+        background-color:Grey;
+        }
+      img {
+        float:left;
+        width:100px;
+        height:100px;
+        }
+      .body {
+        padding:5px;
+        margin-top:15px;
+        margin-left:15%;
+        margin-right:15%;
+        background-color:LightGrey;
+        font-family: "Trirong", serif;
+        font-size:15px;
+        border:1px solid black;
+        }
+      h2 {
+        font-size:30px;
+        font-family: "Audiowide", sans-serif;
+        text-align: center;
+        }
+      .example {
+        background-color:white;
+        padding:10px;
+        margin:5px;
+        }
+    </style>
+  </head>
+  <body style="background-color:#fce38a;">
+    <div class="head">
+      <h1 style="text-align:center;"><img src="Attachments/logo.png"><br>JAVA SCRIPT TUTORIAL</h>
+    </div>
+    <ul>
+      <li><a href="01home.html">Home</a></li>
+      <li><a href="02statements.html">Statements</a></li>
+      <li><a href="03comments.html">Comments</a></li>
+      <li><a href="04variables.html">Variables</a></li>
+      <li style="background-color: #111;"><a href="05operators.html">Operators</a></li>
+      <li><a href="06forms.html">Forms</a></li>
+      <li><a href="07functions.html">Functions</a></li>
+      <li><a href="08objects.html">Objects</a></li>
+      <li><a href="09events.html">Events</a></li>
+      <li><a href="10strings.html">Strings</a></li>
+      <li><a href="11numbers.html">Numbers</a></li>
+      <li><a href="12arrays.html">Arrays</a></li>
+      <li><a href="13dates.html">Dates</a></li>
+      <li><a href="14math.html">Math</a></li>
+      <li><a href="15conditions.html">Conditions</a></li>
+      <li><a href="16loops.html">Loops</a></li>
+      <li><a href="17regexp.html">Regexp</a></li>
+      <li><a href="18errors.html">Errors</a></li>
+      <li><a href="19this.html">this.</a></li>
+      <li><a href="20let.html">Let</a></li>
+      <li><a href="21const.html">Const.</a></li>
+      <li><a href="22classes.html">Classes</a></li>
+      <li><a href="23debugging.html">Debugging</a></li>
+    </ul>
+    <div class="body">
+      <h2>JavaScript Operators</h2>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Assign values to variables and add them together:
+
+var x = 5;         // assign the value 5 to x
+var y = 2;         // assign the value 2 to y
+var z = x + y;     // assign the value 7 to z (5 + 2)
+</pre>
+      </div>
+      <p>The assignment operator (=) assigns a value to a variable.</p>
+      <div class="example">
+        <h3>Assignment</h3>
+        <pre>var x = 5;         // assign the value 5 to x</pre>
+      </div>
+      <p>The addition operator (+) adds numbers:</p>
+      <div class="example">
+        <h3>Addition</h3>
+        <pre>var x = 5;
+var y = 2;
+var z = x + y;</pre>
+        <iframe src="Attachments/oper1.html" title="Example1" width=100% height=100px></iframe>
+      </div>
+      <p>The multiplication operator (*) multiplies numbers</p>
+      <div class="example">
+        <h3>Multiplying</h3>
+        <pre>var x = 5;
+var y = 2;
+var z = x + y;</pre>
+        <iframe src="Attachments/oper2.html" title="Example2" width=100% height=100px></iframe>
+      </div>
+      <h2>JavaScript Arithmetic Operators</h2>
+      <p>Arithmetic operators are used to perform arithmetic on numbers (literals or variables).</p>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Operator</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>+</td>
+          <td>Addition</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>-</td>
+          <td>Subtraction</td>
+        </tr>
+        <tr>
+          <td>*</td>
+          <td>Multiplication</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>**</td>
+          <td>Exponentiation</td>
+        </tr>
+        <tr>
+          <td>/</td>
+          <td>Divison</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>%</td>
+          <td>Modulus(Remainder)</td>
+        </tr>
+        <tr>
+          <td>++</td>
+          <td>Increment</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>--</td>
+          <td>Decrement</td>
+        </tr>
+      </table>
+      <pre>A typical arithmetic operation operates on two numbers.
+
+The two numbers can be literals:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <p>var x = 100 + 50;</p>
+        <iframe src="Attachments/oper3.html" title="Example3" width=100% height=50px></iframe>
+      </div>
+      <p>or variables:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var a = 100;
+var b = 50;
+var x = a + b;</pre>
+        <iframe src="Attachments/oper4.html" title="Example4" width=100% height=50px></iframe>
+      </div>
+      <p>or expressions:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var a = 3;
+var x = (100 + 50)*a;</pre>
+        <iframe src="Attachments/oper5.html" title="Example5" width=100% height=50px></iframe>
+      </div>
+      <h2>Operators and Operands</h2>
+      <pre>The numbers (in an arithmetic operation) are called <b>operands.</b>
+
+The operation (to be performed between the two operands) is defined by an <b>operator.</b></pre>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="border:none;background-color:white;">
+          <th>Operand</th>
+          <th>Operator</th>
+          <th>Operand</th>
+        </tr>
+        <tr>
+          <td>100</td>
+          <td>+</td>
+          <td>50</td>
+        </tr>
+      </table>
+      <h2>Operator Precedence</h2>
+      <p>Operator precedence describes the order in which operations are performed in an arithmetic expression.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <p>var x = 100 + 50 * 3;</p>
+        <iframe src="Attachments/oper6.html" title="Example6" width=100% height=100px></iframe>
+      </div>
+      <pre>Is the result of example above the same as 150 * 3, or is it the same as 100 + 150?
+
+Is the addition or the multiplication done first?
+
+As in traditional school mathematics, the multiplication is done first.
+
+Multiplication (*) and division (/) have higher <b>precedence</b> than addition (+) and subtraction (-).
+
+And (as in school mathematics) the precedence can be changed by using parentheses:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <p>var x = (100 + 50) * 3;</p>
+        <iframe src="Attachments/oper7.html" title="Example7" width=100% height=100px;></iframe>
+      </div>
+      <pre>When using parentheses, the operations inside the parentheses are computed first.
+
+When many operations have the same precedence (like addition and subtraction), they are computed from left to right:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <p>var x = 100 + 50 - 3;</p>
+        <iframe src="Attachments/oper8.html" title="Example8" width=100% height=100px;></iframe>
+      </div>
+            <h2>JavaScript Operator Precedence Values</h2>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Value</th>
+          <th>Operator</th>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>( )</td>
+          <td>Expression grouping</td>
+          <td>(3 + 4)</td>
+        </tr>
+        <tr style="background-color:white; height:30px;">
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>.</td>
+          <td>Member</td>
+          <td>person.name</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>19</td>
+          <td>[]</td>
+          <td>Member</td>
+          <td>person["name"]</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>()</td>
+          <td>Function call</td>
+          <td>myFunction()</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>19</td>
+          <td>new</td>
+          <td>Create</td>
+          <td>new Data()</td>
+        </tr>
+        <tr style="height:30px;">
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>17</td>
+          <td>++</td>
+          <td>Postfix Increment</td>
+          <td>i++</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>--</td>
+          <td>Postfix Decrement</td>
+          <td>i--</td>
+        </tr>
+        <tr style="background-color:white; height:30px;">
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>++</td>
+          <td>Prefix Increment</td>
+          <td>++i</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>16</td>
+          <td>--</td>
+          <td>Prefix Decrement</td>
+          <td>--i</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>!</td>
+          <td>Logical not</td>
+          <td>!(x == y)</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>16</td>
+          <td>typeof</td>
+          <td>Type</td>
+          <td>typeof x</td>
+        </tr>
+        <tr style="height:30px;">
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>15</td>
+          <td>**</td>
+          <td>Exponential</td>
+          <td>10**2</td>
+        </tr>
+        <tr style="height:30px;">
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>14</td>
+          <td>*</td>
+          <td>Multiplcation</td>
+          <td>10 * 5</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>/</td>
+          <td>Division</td>
+          <td>10 / 5</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>14</td>
+          <td>%</td>
+          <td>Division Remainder</td>
+          <td>10 % 5</td>
+        </tr>
+        <tr style="height:30px;">
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>13</td>
+          <td>+</td>
+          <td>Addition</td>
+          <td>10 + 5</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>-</td>
+          <td>Subtraction</td>
+          <td>10 - 5</td>
+        </tr>
+        <tr style="background-color:white; height:30px;">
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td><<</td>
+          <td>Shift left</td>
+          <td>x << 2</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>12</td>
+          <td>>></td>
+          <td>Shift right</td>
+          <td>x >> 2</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>>>></td>
+          <td>Shift right(Unsigned)</td>
+          <td>x >>> 2</td>
+        </tr>
+        <tr style="background-color:white; height:30px;">
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td><</td>
+          <td>Less than</td>
+          <td>x < y</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>11</td>
+          <td><=</td>
+          <td>Less tha or equal</td>
+          <td>x <= y</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>></td>
+          <td>Greater than</td>
+          <td>x > y</td>
+        </tr>
+        <tr style="background-color:white;>
+          <td>11</td>
+          <td>>=</td>
+          <td>Greater tha or equal</td>
+          <td>x >= y</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>in</td>
+          <td>Preoperty in Object</td>
+          <td>"PI" in Math</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>11</td>
+          <td>instanceof</td>
+          <td>Instance of Object</td>
+          <td>instanceof Array</td>
+        </tr>
+        <tr style="height:30px;">
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>10</td>
+          <td>==</td>
+          <td>Equal</td>
+          <td>x == y</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>===</td>
+          <td>Strict equal</td>
+          <td>x === y</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>10</td>
+          <td>!=</td>
+          <td>Unequal</td>
+          <td>x != y</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>!==</td>
+          <td>Strict unequal</td>
+          <td>x !== y</td>
+        </tr>
+        <tr style="background-color:white; height:30px;">
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>&</td>
+          <td>Bitwise AND</td>
+          <td>x & y</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>8</td>
+          <td>^</td>
+          <td>Bitwise XOR</td>
+          <td>x ^ y</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>|</td>
+          <td>Bitwise OR</td>
+          <td>x | y</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>6</td>
+          <td>&&</td>
+          <td>Logical AND</td>
+          <td>x && y</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>||</td>
+          <td>Logical OR</td>
+          <td>x || y</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>4</td>
+          <td> ? : </td>
+          <td>Condition</td>
+          <td>? "Yes" : "No" </td>
+        </tr>
+        <tr style="height:30px;">
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>3</td>
+          <td>+=</td>
+          <td>Assignment</td>
+          <td>x += y</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>/=</td>
+          <td>Assignment</td>
+          <td>x /= y</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>3</td>
+          <td>-=</td>
+          <td>Assignment</td>
+          <td>x -= y</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>*=</td>
+          <td>Assignment</td>
+          <td>x *= y</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>3</td>
+          <td>%=</td>
+          <td>Assignment</td>
+          <td>x %= y</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><<=</td>
+          <td>Assignment</td>
+          <td>x <<= y</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>3</td>
+          <td>>>=</td>
+          <td>Assignment</td>
+          <td>x >>= y</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>>>>=</td>
+          <td>Assignment</td>
+          <td>x >>>= y</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>3</td>
+          <td>&=</td>
+          <td>Assignment</td>
+          <td>x &= y</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>^=</td>
+          <td>Assignment</td>
+          <td>x ^= y</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>3</td>
+          <td>|=</td>
+          <td>Assignment</td>
+          <td>x |= y</td>
+        </tr>
+        <tr style="height:30px;">
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>2</td>
+          <td>yield</td>
+          <td>Pause Function</td>
+          <td>yield x</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>,</td>
+          <td>comma</td>
+          <td>5 , 6</td>
+        </tr>
+      </table>
+      <em>Expressions in parentheses are fully computed before the value is used in the rest of the expression.</em>
+      <div class="example">
+        <h3 align = "center">Example</h3>
+        <iframe src="Attachments/operator_quiz.html" title="quiz" width=100% height=600px;></iframe>
+      </div>
+</div>
+<ul style="width:90%; overflow:hidden; margin:50px;background-color:white;">
+      <li style="float:left;background-color:red;"><a href="04variables.html">Prev</a></li>
+      <li style="float:right;background-color:red;"><a href="06forms.html">Next</a></li>
+</body>
+</html>

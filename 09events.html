@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>JavaScript Events</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      .head {
+        height:100px;
+        font-family: 'Courier New', monospace;
+        color:Yellow;
+        background-color: Black;
+        }
+      ul {
+        float:left;
+        width:13%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: Red;
+        position:sticky;
+        margin-top:15px;
+        }
+      li a{
+        border:1px solid black;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+      li a:hover {
+        background-color:Grey;
+        }
+      img {
+        float:left;
+        width:100px;
+        height:100px;
+        }
+      .body {
+        padding:5px;
+        margin-top:15px;
+        margin-left:15%;
+        margin-right:15%;
+        background-color:LightGrey;
+        font-family: "Trirong", serif;
+        font-size:15px;
+        border:1px solid black;
+        }
+      h2 {
+        font-size:30px;
+        font-family: "Audiowide", sans-serif;
+        text-align: center;
+        }
+      .example {
+        background-color:white;
+        padding:10px;
+        margin:5px;
+        }
+    </style>
+  </head>
+  <body style="background-color:#fce38a;">
+    <div class="head">
+      <h1 style="text-align:center;"><img src="Attachments/logo.png"><br>JAVA SCRIPT TUTORIAL</h>
+    </div>
+    <ul>
+      <li><a href="01home.html">Home</a></li>
+      <li><a href="02statements.html">Statements</a></li>
+      <li><a href="03comments.html">Comments</a></li>
+      <li><a href="04variables.html">Variables</a></li>
+      <li><a href="05operators.html">Operators</a></li>
+      <li><a href="06forms.html">Forms</a></li>
+      <li><a href="07functions.html">Functions</a></li>
+      <li><a href="08objects.html">Objects</a></li>
+      <li style="background-color: #111;"><a href="09events.html">Events</a></li>
+      <li><a href="10strings.html">Strings</a></li>
+      <li><a href="11numbers.html">Numbers</a></li>
+      <li><a href="12arrays.html">Arrays</a></li>
+      <li><a href="13dates.html">Dates</a></li>
+      <li><a href="14math.html">Math</a></li>
+      <li><a href="15conditions.html">Conditions</a></li>
+      <li><a href="16loops.html">Loops</a></li>
+      <li><a href="17regexp.html">Regexp</a></li>
+      <li><a href="18errors.html">Errors</a></li>
+      <li><a href="19this.html">this.</a></li>
+      <li><a href="20let.html">Let</a></li>
+      <li><a href="21const.html">Const.</a></li>
+      <li><a href="22classes.html">Classes</a></li>
+      <li><a href="23debugging.html">Debugging</a></li>
+    </ul>
+    <div class="body">
+      <h2>JavaScript Events</h2>
+      <pre>HTML events are <b>"things"</b> that happen to HTML elements.
+
+When JavaScript is used in HTML pages, JavaScript can <b>"react"</b> on these events.
+
+</pre>  
+      <h2>HTML Events</h2>
+      <pre>
+An HTML event can be something the browser does, or something a user does.
+
+Here are some examples of HTML events:
+
+An HTML web page has finished loading
+An HTML input field was changed
+An HTML button was clicked
+Often, when events happen, you may want to do something.
+
+JavaScript lets you execute code when events are detected.
+
+HTML allows event handler attributes, <b>with JavaScript code,</b> to be added to HTML elements.
+
+In the following example, an onclick attribute (with code), is added to a <em>button</em> element:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <iframe src="Attachments/event1.html" title="Example1" width=100% height=100px></iframe>
+      </div>
+      <pre>In the example above, the JavaScript code changes the content of the element with id="demo".
+
+In the next example, the code changes the content of its own element (using this.innerHTML):</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <iframe src="Attachments/event2.html" title="Example2" width=100% height=50px></iframe>
+      </div>
+      <em>JavaScript code is often several lines long. It is more common to see event attributes calling functions:</em>
+      <div class="example">
+        <h3>Example</h3>
+        <iframe src="Attachments/event3.html" title="Example3" width=100% height=120px></iframe>
+      </div>
+      <h2>Common HTML Events</h2>
+      <p>Here is a list of some common HTML events:</p>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Event</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>onchange</td>
+          <td>Terminates a switch or a loop</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>onclick</td>
+          <td>Jumps out of a loop and starts at the top</td>
+        </tr>
+        <tr>
+          <td>onmouseover</td>
+          <td>Stops the execution of JavaScript, and calls (if available) the debugging function</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>onmouseout</td>
+          <td>Executes a block of statements, and repeats the block, while a condition is true</td>
+        </tr>
+        <tr>
+          <td>onkeydown</td>
+          <td>Marks a block of statements to be executed, as long as a condition is true</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>onload</td>
+          <td>Declares a function</td>
+        </tr>
+      </table>
+      <h2>What can JavaScript Do?</h2>
+      <pre>Event handlers can be used to handle and verify user input, user actions, and browser actions:
+
+Things that should be done every time a page loads
+Things that should be done when the page is closed
+Action that should be performed when a user clicks a button
+Content that should be verified when a user inputs data
+And more ...
+Many different methods can be used to let JavaScript work with events:
+
+HTML event attributes can execute JavaScript code directly
+HTML event attributes can call JavaScript functions
+You can assign your own event handler functions to HTML elements
+You can prevent events from being sent or being handled
+And more ...</pre>
+      <div class="example">
+        <h3 align = "center">Quiz</h3>
+        <iframe src="Attachments/event_quiz.html" title="quiz" width=100% height=600px></iframe>
+      </div>
+</div>
+<ul style="width:90%; overflow:hidden; margin:50px;background-color:white;">
+      <li style="float:left;background-color:red;"><a href="08objects.html">Prev</a></li>
+      <li style="float:right;background-color:red;"><a href="10strings.html">Next</a></li>
+</ul>
+</body>
+</html>

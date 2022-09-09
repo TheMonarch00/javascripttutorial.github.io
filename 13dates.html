@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>JavaScript Dates</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      .head {
+        height:100px;
+        font-family: 'Courier New', monospace;
+        color:Yellow;
+        background-color: Black;
+        }
+      ul {
+        float:left;
+        width:13%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: Red;
+        position:sticky;
+        margin-top:15px;
+        }
+      li a{
+        border:1px solid black;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+      li a:hover {
+        background-color:Grey;
+        }
+      img {
+        float:left;
+        width:100px;
+        height:100px;
+        }
+      .body {
+        padding:5px;
+        margin-top:15px;
+        margin-left:15%;
+        margin-right:15%;
+        background-color:LightGrey;
+        font-family: "Trirong", serif;
+        font-size:15px;
+        border:1px solid black;
+        }
+      h2 {
+        font-size:30px;
+        font-family: "Audiowide", sans-serif;
+        text-align: center;
+        }
+      .example {
+        background-color:white;
+        padding:10px;
+        margin:5px;
+        }
+    </style>
+  </head>
+  <body style="background-color:#fce38a;">
+    <div class="head">
+      <h1 style="text-align:center;"><img src="Attachments/logo.png"><br>JAVA SCRIPT TUTORIAL</h>
+    </div>
+    <ul>
+      <li><a href="01home.html">Home</a></li>
+      <li><a href="02statements.html">Statements</a></li>
+      <li><a href="03comments.html">Comments</a></li>
+      <li><a href="04variables.html">Variables</a></li>
+      <li><a href="05operators.html">Operators</a></li>
+      <li><a href="06forms.html">Forms</a></li>
+      <li><a href="07functions.html">Functions</a></li>
+      <li><a href="08objects.html">Objects</a></li>
+      <li><a href="09events.html">Events</a></li>
+      <li><a href="10strings.html">Strings</a></li>
+      <li><a href="11numbers.html">Numbers</a></li>
+      <li><a href="12arrays.html">Arrays</a></li>
+      <li style="background-color: #111;"><a href="13dates.html">Dates</a></li>
+      <li><a href="14math.html">Math</a></li>
+      <li><a href="15conditions.html">Conditions</a></li>
+      <li><a href="16loops.html">Loops</a></li>
+      <li><a href="17regexp.html">Regexp</a></li>
+      <li><a href="18errors.html">Errors</a></li>
+      <li><a href="19this.html">this.</a></li>
+      <li><a href="20let.html">Let</a></li>
+      <li><a href="21const.html">Const.</a></li>
+      <li><a href="22classes.html">Classes</a></li>
+      <li><a href="23debugging.html">Debugging</a></li>
+    </ul>
+    <div class="body">
+      <h2>JavaScript Date Objects</h2>
+      <h2>JavaScript Date Output</h2>
+      <p>By default, JavaScript will use the browser's time zone and display a date as a full text string:</p>
+      <b id="demo"></b>
+
+      <script>
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d;
+      </script>
+      <h2>Creating Date Objects</h2>
+      <pre>Date objects are created with the <b>new Date()</b> constructor.
+
+There are <b>4 ways</b> to create a new date object:</pre>
+      <div class="example">
+        <pre>new Date()
+new Date(year, month, day, hours, minutes, seconds, milliseconds)
+new Date(milliseconds)
+new Date(date string)</pre>
+      </div>
+      <h2>new Date()</h2>
+      <p><b>new Date()</b> creates a new date object with the current date and time:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();</pre>
+        <iframe src="Attachments/date1.html" title="Example1" width=100% height=50px></iframe>
+      </div>
+      <b>Date objects are static. The computer time is ticking, but date objects are not.</b>
+      <h2>new Date(year, month, ...)</h2>
+      <pre><b>new Date(year, month, ...)</b> creates a new date object with a <b>specified date and time</b>.
+
+7 numbers specify year, month, day, hour, minute, second, and millisecond (in that order):</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date(2020, 4, 15, 10, 33, 30, 0);</pre>
+        <iframe src="Attachments/date2.html" title="Example2" width=100% height=50px></iframe>
+      </div>
+      <pre><em><b>Note</b>: JavaScript counts months from 0 to 11.
+January is 0. December is 11.</em>
+
+6 numbers specify year, month, day, hour, minute, second:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date(2020, 4, 15, 10, 33, 30);</pre>
+        <iframe src="Attachments/date3.html" title="Example3" width=100% height=50px></iframe>
+      </div>
+      <p>5 numbers specify year, month, day, hour, and minute:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date(2020, 4, 15, 10, 33);
+</pre>
+        <iframe src="Attachments/date4.html" title="Example4" width=100% height=50px></iframe>
+      </div>
+      <p>4 numbers specify year, month, day, and hour:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date(2020, 4, 15, 10);</pre>
+        <iframe src="Attachments/date5.html" title="Example5" width=100% height=50px></iframe>
+      </div>
+      <p>3 numbers specify year, month, and day:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date(2020, 4, 15);</pre>
+        <iframe src="Attachments/date6.html" title="Example6" width=100% height=50px></iframe>
+      </div>
+      <p>2 numbers specify year and month:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date(2020, 4);</pre>
+        <iframe src="Attachments/date7.html" title="Example7" width=100% height=50px></iframe>
+      </div>
+      <p>You cannot omit month. If you supply only one parameter it will be treated as milliseconds.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date(2020);</pre>
+        <iframe src="Attachments/date8.html" title="Example8" width=100% height=50px></iframe>
+      </div>
+      <h2>Previous Century</h2>
+      <p>One and two digit years will be interpreted as 19xx:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date(99, 11, 24);</pre>
+        <iframe src="Attachments/date9.html" title="Example9" width=100% height=50px></iframe>
+      </div>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date(9, 11, 24);</pre>
+        <iframe src="Attachments/date10.html" title="Example10" width=100% height=50px></iframe>
+      </div>
+      <h2>JavaScript Stores Dates as Milliseconds</h2>
+      <pre>JavaScript stores dates as number of milliseconds since January 01, 1970, 00:00:00 UTC (Universal Time Coordinated).
+
+<b>Zero time is January 01, 1970 00:00:00 UTC</b>.</pre>
+      <h2>new Date(milliseconds)</h2>
+      <p><b>new Date(milliseconds)</b> creates a new date object as <b>zero time plus milliseconds</b>:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date(0);</pre>
+        <iframe src="Attachments/date11.html" title="Example11" width=100% height=50px></iframe>
+      </div>
+      <p>01 January 1970 <b>plus</b> 100 000 000 000 milliseconds is approximately 03 March 1973:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date(100000000000);</pre>
+        <iframe src="Attachments/date12.html" title="Example12" width=100% height=50px></iframe>
+      </div>
+      <p>January 01 1970 <b>minus</b> 100 000 000 000 milliseconds is approximately October 31 1966:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date(-100000000000);</pre>
+        <iframe src="Attachments/date13.html" title="Example13" width=100% height=50px></iframe>
+      </div>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date(86400000);</pre>
+        <iframe src="Attachments/date14.html" title="Example14" width=100% height=50px></iframe>
+      </div>
+      <p>One day (24 hours) is 86 400 000 milliseconds.</p>
+      <h2>Displaying Dates</h2>
+      <p>JavaScript will (by default) output dates in full text string format:</p>
+      <div class="example">
+        <pre>Wed Mar 25 2015 05:30:00 GMT+0530 (India Standard Time)</pre>
+      </div>
+      <p>When you display a date object in HTML, it is automatically converted to a string, with the <b>toString() method</b>.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>d = new Date();
+document.getElementById("demo").innerHTML = d;</pre>
+        <h3>Same as:</h3>
+        <pre>d = new Date();
+document.getElementById("demo").innerHTML = d.toString();</pre>
+        <iframe src="Attachments/date15.html" title="Example15" width=100% height=50px></iframe>
+      </div>
+      <p>The <b>toUTCString()</b> method converts a date to a UTC string (a date display standard).</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+document.getElementById("demo").innerHTML = d.toDateString();</pre>
+        <iframe src="Attachments/date16.html" title="Example16" width=100% height=50px></iframe>
+      </div>
+      <p>The <b>toISOString()</b> method converts a date to a string, using the ISO standard format:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+document.getElementById("demo").innerHTML = d.toISOString();</pre>
+        <iframe src="Attachments/date17.html" title="Example17" width=100% height=50px></iframe>
+      </div>
+      <h2>JavaScript Date Input</h2>
+      <p>There are generally 3 types of JavaScript date input formats:</p>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>ISO Date</td>
+          <td>"2015-03-25" (The International Standard)</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>Short Date</td>
+          <td>"03/25/2015"</td>
+        </tr>
+        <tr>
+          <td>Long Date</td>
+          <td>"Mar 25 2015" or "25 Mar 2015"</td>
+        </tr>
+      </table>
+      <pre>The ISO format follows a strict standard in JavaScript.
+
+The other formats are not so well defined and might be browser specific.</pre>
+      <h2>JavaScript ISO Dates</h2>
+      <pre>ISO 8601 is the international standard for the representation of dates and times.
+
+The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date("2015-03-25");</pre>
+      </div>
+      <h2>ISO Dates (Year and Month)</h2>
+      <p>ISO dates can be written without specifying the day (YYYY-MM):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date("2015-03");</pre>
+      </div>
+      <h2>ISO Dates (Only Year)</h2>
+      <p>ISO dates can be written without month and day (YYYY):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date("2015");</pre>
+      </div>
+      <h2>ISO Dates (Date-Time)</h2>
+      <p>ISO dates can be written with added hours, minutes, and seconds (YYYY-MM-DDTHH:MM:SSZ):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date("2015-03-25T12:00:00Z");
+</pre>
+      </div>
+      <pre>Date and time is separated with a capital T.
+
+UTC time is defined with a capital letter Z.
+
+If you want to modify the time relative to UTC, remove the Z and add +HH:MM or -HH:MM instead:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date("2015-03-25T12:00:00-06:30");</pre>
+      </div>
+      <p>UTC (Universal Time Coordinated) is the same as GMT (Greenwich Mean Time).</p>
+      <h2>Time Zones</h2>
+      <pre>When setting a date, without specifying the time zone, JavaScript will use the browser's time zone.
+
+When getting a date, without specifying the time zone, the result is converted to the browser's time zone.
+</pre><p>
+In other words: If a date/time is created in GMT (Greenwich Mean Time), the date/time will be converted to CDT (Central US Daylight Time) if a user browses from central US.</p>
+      <h2>JavaScript Short Dates.</h2>
+      <p>Short dates are written with an "MM/DD/YYYY" syntax like this:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date("03/25/2015");</pre>
+      </div>
+      <h2>JavaScript Long Dates.</h2>
+      <p>Long dates are most often written with a "MMM DD YYYY" syntax like this:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date("Mar 25 2015");</pre>
+      </div>
+      <p>Month and day can be in any order:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date("25 Mar 2015");</pre>
+      </div>
+      <p>And, month can be written in full (January), or abbreviated (Jan):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date("January 25 2015");</pre>
+      </div>
+      <em>Commas are ignored. Names are case insensitive:</em>
+      <h2>Date Input - Parsing Dates</h2>
+      <pre>If you have a valid date string, you can use the <b>Date.parse()</b> method to convert it to milliseconds.
+
+<b>Date.parse()</b> returns the number of milliseconds between the date and January 1, 1970:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var msec = Date.parse("March 21, 2012");
+document.getElementById("demo").innerHTML = msec;</pre>
+        <iframe src="Attachments/date18.html" title="Example18" width=100% height=50px></iframe>
+      </div>
+      <p>You can then use the number of milliseconds to <b>convert it to a date</b> object:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var msec = Date.parse("March 21, 2012");
+var d = new Date(msec);
+document.getElementById("demo").innerHTML = d;</pre>
+        <iframe src="Attachments/date19.html" title="Example19" width=100% height=50px></iframe>
+      </div>
+      <h2>JavaScript Get Date Methods</h2>
+      <p>These methods can be used for getting information from a date object:</p>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>getFullYear()</td>
+          <td>Get the year as a four digit number (yyyy)</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>getMonth()</td>
+          <td>Get the month as a number (0-11)</td>
+        </tr>
+        <tr>
+          <td>getDate()</td>
+          <td>Get the day as a number (1-31)</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>getHours()</td>
+          <td>Get the hour (0-23)</td>
+        </tr>
+        <tr>
+          <td>getMinutes()</td>
+          <td>Get the minute (0-59)</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>getSeconds()</td>
+          <td>Get the second (0-59)</td>
+        </tr>
+        <tr>
+          <td>getMilliseconds()</td>
+          <td>Get the <b>millisecond</b> (0-999)</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>getTime()</td>
+          <td>Get the time (milliseconds since January 1, 1970)</td>
+        </tr>
+        <tr>
+          <td>getDay()</td>
+          <td>Get the weekday as a number (0-6)</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>Date.now()</td>
+          <td>Get the time. ECMAScript 5.</td>
+        </tr>
+      </table>
+      <h2>The getTime() Method</h2>
+      <p>The <b>getTime()</b> method returns the number of milliseconds since January 1, 1970:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+document.getElementById("demo").innerHTML = d.getTime();
+</pre>
+        <iframe src="Attachments/date20.html" title="Example20" width=100% height=50px></iframe>
+      </div>
+      <h2>The getFullYear() Method</h2>
+      <p>The <b>getFullYear()</b> method returns the year of a date as a four digit number:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+document.getElementById("demo").innerHTML = d.getFullYear();</pre>
+        <iframe src="Attachments/date21.html" title="Example21" width=100% height=50px></iframe>
+      </div>
+      <h2>The getMonth() Method</h2>
+      <p>The <b>getMonth()</b> method returns the month of a date as a number (0-11):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+document.getElementById("demo").innerHTML = d.getMonth();</pre>
+        <iframe src="Attachments/date22.html" title="Example22" width=100% height=50px></iframe>
+      </div>
+      <em>In JavaScript, the first month (January) is month number 0, so December returns month number 11.</em>
+      <p>You can use an array of names, and <b>getMonth()</b> to return the month as a name:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September","October",
+"November", "December"];
+document.getElementById("demo").innerHTML = months[d.getMonth()];</pre>
+        <iframe src="Attachments/date23.html" title="Example23" width=100% height=50px></iframe>
+      </div>
+      <h2>The getDate() Method</h2>
+      <p>The <b>getDate()</b> method returns the day of a date as a number (1-31):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+document.getElementById("demo").innerHTML = d.getDate();
+</pre>
+        <iframe src="Attachments/date24.html" title="Example24" width=100% height=50px></iframe>
+      </div>
+      <h2>The getHours() Method</h2>
+      <p>The <b>getHours()</b> method returns the hours of a date as a number (0-23):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+document.getElementById("demo").innerHTML = d.getHours();
+</pre>
+        <iframe src="Attachments/date25.html" title="Example25" width=100% height=50px></iframe>
+      </div>
+      <h2>The getMinutes() Method</h2>
+      <p>The <b>getMinutes()</b> method returns the minutes of a date as a number (0-59):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+document.getElementById("demo").innerHTML = d.getMinutes();</pre>
+        <iframe src="Attachments/date26.html" title="Example26" width=100% height=50px></iframe>
+      </div>
+      <h2>The getSeconds() Method</h2>
+      <p>The <b>getSeconds()</b> method returns the seconds of a date as a number (0-59):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+document.getElementById("demo").innerHTML = d.getSeconds();</pre>
+        <iframe src="Attachments/date27.html" title="Example27" width=100% height=50px></iframe>
+      </div>
+      <p>The <b>Number()</b> method above returns the number of milliseconds since 1.1.1970.</p>
+      <h2>The getMilliseconds() Method</h2>
+      <p>The <b>getMilliseconds()</b> method returns the milliseconds of a date as a number (0-999):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+document.getElementById("demo").innerHTML = d.getMilliseconds();</pre>
+        <iframe src="Attachments/date28.html" title="Example28" width=100% height=50px></iframe>
+      </div>
+      <h2>The getDay() Method</h2>
+      <p>The <b>getDay()</b> method returns the weekday of a date as a number (0-6):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+document.getElementById("demo").innerHTML = d.getDay();</pre>
+        <iframe src="Attachments/date29.html" title="Example29" width=100% height=50px></iframe>
+      </div>
+      <em>In JavaScript, the first day of the week (0) means "Sunday", even if some countries in the world consider the first day of the week to be "Monday"</em>
+      <p>You can use an array of names, and <b>getDay()</b> to return the weekday as a name:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+document.getElementById("demo").innerHTML = days[d.getDay()];</pre>
+        <iframe src="Attachments/date30.html" title="Example30" width=100% height=50px></iframe>
+      </div>
+      <h2>UTC Date Methods</h2>
+      <p>UTC date methods are used for working with UTC dates (Universal Time Zone dates):</p>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>getUTCFullYear()</td>
+          <td>Same as getFullYear(), but returns the UTC year</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>getUTCMonth()</td>
+          <td>Same as getMonth(), but returns the UTC month</td>
+        </tr>
+        <tr>
+          <td>getUTCDate()</td>
+          <td>Same as getDate(), but returns the UTC date</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>getUTCHours()</td>
+          <td>Same as getHours(), but returns the UTC hour)</td>
+        </tr>
+        <tr>
+          <td>getUTCMinutes()</td>
+          <td>Same as getMinutes(), but returns the UTC minutes</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>getUTCSeconds()</td>
+          <td>Same as getSeconds(), but returns the UTC seconds</td>
+        </tr>
+        <tr>
+          <td>getUTCMilliseconds()</td>
+          <td>Same as getMilliseconds(), but returns the UTC milliseconds</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>getUTCDay()</td>
+          <td>Same as getDay(), but returns the UTC day</td>
+        </tr>
+      </table>
+      <h2>JavaScript Set Date Methods</h2>
+      <p>Set Date methods let you set date values (years, months, days, hours, minutes, seconds, milliseconds) for a Date Object.</p>
+      <p>Set Date methods are used for setting a part of a date:</p>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>setDate()</td>
+          <td>Set the day as a number (1-31)</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>setFullYear()</td>
+          <td>Set the year (optionally month and day)</td>
+        </tr>
+        <tr>
+          <td>setHours()</td>
+          <td>Set the hour (0-23)</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>setMilliseconds()</td>
+          <td>Set the milliseconds (0-999)</td>
+        </tr>
+        <tr>
+          <td>setMinutes()</td>
+          <td>Set the minutes (0-59)</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>setMonth()</td>
+          <td>Set the month (0-11)</td>
+        </tr>
+        <tr>
+          <td>setSeconds()</td>
+          <td>Set the seconds (0-59)</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>setTime()</td>
+          <td>Set the time (milliseconds since January 1, 1970)</td>
+        </tr>
+      </table>
+      <h2>The setFullYear() Method</h2>
+      <p><b>The setFullYear()</b> method sets the year of a date object. In this example to 2020:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+d.setFullYear(2020);
+document.getElementById("demo").innerHTML = d;</pre>
+        <iframe src="Attachments/date31.html" title="Example31" width=100% height=50px></iframe>
+      </div>
+      <p>The <b>setFullYear()</b> method can <b>optionally</b> set month and day:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+d.setFullYear(2020, 11, 3);
+document.getElementById("demo").innerHTML = d;</pre>
+        <iframe src="Attachments/date32.html" title="Example32" width=100% height=50px></iframe>
+      </div>
+      <h2>The setMonth() Method</h2>
+      <p>The <b>setMonth()</b> method sets the month of a date object (0-11):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+d.setMonth(11);
+document.getElementById("demo").innerHTML = d;</pre>
+        <iframe src="Attachments/date33.html" title="Example33" width=100% height=50px></iframe>
+      </div>
+      <h2>The setDate() Method</h2>
+      <p>The <b>setDate()</b> method sets the day of a date object (1-31):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+d.setDate(15);
+document.getElementById("demo").innerHTML = d;</pre>
+        <iframe src="Attachments/date34.html" title="Example34" width=100% height=50px></iframe>
+      </div>
+      <p>The <b>setDate()</b> method can also be used to <b>add days</b> to a date:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+d.setDate(d.getDate() + 50);
+document.getElementById("demo").innerHTML = d;</pre>
+        <iframe src="Attachments/date35.html" title="Example35" width=100% height=50px></iframe>
+      </div>
+      <em>If adding days shifts the month or year, the changes are handled automatically by the Date object.</em>
+      <h2>The setHours() Method</h2>
+      <p>The <b>setHours()</b> method sets the hours of a date object (0-23):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+d.setHours(22);
+document.getElementById("demo").innerHTML = d;</pre>
+        <iframe src="Attachments/date36.html" title="Example36" width=100% height=50px></iframe>
+      </div>
+      <h2>The setMinutes() Method</h2>
+      <p>The <b>setMinutes()</b> method sets the minutes of a date object (0-59):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+d.setMinutes(30);
+document.getElementById("demo").innerHTML = d;</pre>
+        <iframe src="Attachments/date37.html" title="Example37" width=100% height=50px></iframe>
+      </div>
+      <h2>The setSeconds() Method</h2>
+      <p>The setSeconds() method sets the seconds of a date object (0-59):</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var d = new Date();
+d.setSeconds(30);
+document.getElementById("demo").innerHTML = d;</pre>
+        <iframe src="Attachments/date38.html" title="Example38" width=100% height=50px></iframe>
+      </div>
+      <h2>Compare Dates</h2>
+      <pre>Dates can easily be compared.
+
+The following example compares today's date with January 14, 2100:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>today = new Date();
+someday = new Date();
+someday.setFullYear(2100, 0, 14);
+
+if (someday > today) {
+  text = "Today is before January 14, 2100.";
+} else {
+  text = "Today is after January 14, 2100.";
+}
+document.getElementById("demo").innerHTML = text;</pre>
+        <iframe src="Attachments/date39.html" title="Example39" width=100% height=50px></iframe>
+      </div>
+      <div class="example">
+        <h3 align=center>Assignment</h3>
+        <pre>1. Return today's date and time
+
+2. getFullYear() - Use getFullYear() to get the year.
+
+3. getTime() - return the number of milliseconds since 01.01.1970.
+
+4. setFullYear() - use setFullYear() to set a specific date.
+
+5. toUTCString() - convert today's date (according to UTC) to a string.
+
+6. getDay() - Use getDay() and an array to write a weekday, and not just a number.
+
+7. Display a clock - Display a clock on your web page.</pre>
+      </div>
+</div>
+<ul style="width:90%; overflow:hidden; margin:50px;background-color:white;">
+      <li style="float:left;background-color:red;"><a href="12arrays.html">Prev</a></li>
+      <li style="float:right;background-color:red;"><a href="14math.html">Next</a></li>
+</body>
+</html>

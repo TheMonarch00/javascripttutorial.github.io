@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>JavaScript Functions</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      .head {
+        height:100px;
+        font-family: 'Courier New', monospace;
+        color:Yellow;
+        background-color: Black;
+        }
+      ul {
+        float:left;
+        width:13%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: Red;
+        position:sticky;
+        margin-top:15px;
+        }
+      li a{
+        border:1px solid black;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+      li a:hover {
+        background-color:Grey;
+        }
+      img {
+        float:left;
+        width:100px;
+        height:100px;
+        }
+      .body {
+        padding:5px;
+        margin-top:15px;
+        margin-left:15%;
+        margin-right:15%;
+        background-color:LightGrey;
+        font-family: "Trirong", serif;
+        font-size:15px;
+        border:1px solid black;
+        }
+      h2 {
+        font-size:30px;
+        font-family: "Audiowide", sans-serif;
+        text-align: center;
+        }
+      .example {
+        background-color:white;
+        padding:10px;
+        margin:5px;
+        }
+    </style>
+  </head>
+  <body style="background-color:#fce38a;">
+    <div class="head">
+      <h1 style="text-align:center;"><img src="Attachments/logo.png"><br>JAVA SCRIPT TUTORIAL</h>
+    </div>
+    <ul>
+      <li><a href="01home.html">Home</a></li>
+      <li><a href="02statements.html">Statements</a></li>
+      <li><a href="03comments.html">Comments</a></li>
+      <li><a href="04variables.html">Variables</a></li>
+      <li><a href="05operators.html">Operators</a></li>
+      <li><a href="06forms.html">Forms</a></li>
+      <li style="background-color: #111;"><a href="07functions.html">Functions</a></li>
+      <li><a href="08objects.html">Objects</a></li>
+      <li><a href="09events.html">Events</a></li>
+      <li><a href="10strings.html">Strings</a></li>
+      <li><a href="11numbers.html">Numbers</a></li>
+      <li><a href="12arrays.html">Arrays</a></li>
+      <li><a href="13dates.html">Dates</a></li>
+      <li><a href="14math.html">Math</a></li>
+      <li><a href="15conditions.html">Conditions</a></li>
+      <li><a href="16loops.html">Loops</a></li>
+      <li><a href="17regexp.html">Regexp</a></li>
+      <li><a href="18errors.html">Errors</a></li>
+      <li><a href="19this.html">this.</a></li>
+      <li><a href="20let.html">Let</a></li>
+      <li><a href="21const.html">Const.</a></li>
+      <li><a href="22classes.html">Classes</a></li>
+      <li><a href="23debugging.html">Debugging</a></li>
+    </ul>
+    <div class="body">
+      <h2>JavaScript Functions</h2>
+      <pre>A JavaScript function is a block of code designed to perform a particular task.
+
+A JavaScript function is executed when "something" invokes it (calls it).</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <iframe src="Attachments/func1.html" title="Example1" width=100% height=100px></iframe>
+      </div>
+      <h2>JavaScript Function Syntax</h2>
+      <pre>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+
+Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+
+The parentheses may include parameter names separated by commas:
+(parameter1, parameter2, ...)
+
+The code to be executed, by the function, is placed inside curly brackets: {}</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>function name(parameter1, parameter2, parameter3) {
+  // code to be executed
+}</pre>
+      </div>
+      <pre>Function parameters are listed inside the parentheses () in the function definition.
+
+Function arguments are the values received by the function when it is invoked.
+
+Inside the function, the arguments (the parameters) behave as local variables.
+
+A Function is much the same as a Procedure or a Subroutine, in other programming languages.</pre>
+      <h2>Function Invocation</h2>
+      <pre>The code inside the function will execute when "something" invokes (calls) the function:
+
+When an event occurs (when a user clicks a button)
+When it is invoked (called) from JavaScript code
+Automatically (self invoked)
+You will learn a lot more about function invocation later in this tutorial.</pre>
+      <h2>Function Return</h2>
+      <pre>When JavaScript reaches a return statement, the function will stop executing.
+
+If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.
+
+Functions often compute a return value. The return value is "returned" back to the "caller":</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Calculate the product of two numbers, and return the result:
+
+var x = myFunction(4, 3);   // Function is called, return value will end up in x
+
+function myFunction(a, b) {
+  return a * b;             // Function returns the product of a and b
+}</pre>
+      <iframe src="Attachments/func2.html" title="Example2" width=100% height=100px></iframe>
+      </div>
+      <h2>Why Functions?</h2>
+      <pre>You can reuse code: Define the code once, and use it many times.
+
+You can use the same code many times with different arguments, to produce different results.</pre>
+      <h2>The () Operator Invokes the Function</h2>
+      <pre>Using the example above, toCelsius refers to the function object, and toCelsius() refers to the function result.
+
+Accessing a function without () will return the function object instead of the function result.</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Convert Fahrenheit to Celsius:
+
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+}
+document.getElementById("demo").innerHTML = toCelsius(77);
+</pre>
+        <iframe src="Attachments/func3.html" title="Example3" width=100% height=100px ></iframe>
+      </div>
+      <h2>Functions Used as Variable Values</h2>
+      <p>Functions can be used the same way as you use variables, in all types of formulas, assignments, and calculations.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>Instead of using a variable to store the return value of a function:
+
+var x = toCelsius(77);
+var text = "The temperature is " + x + " Celsius";
+You can use the function directly, as a variable value:
+
+var text = "The temperature is " + toCelsius(77) + " Celsius";</pre>
+        <iframe src="Attachments/func4.html" title="Example4" width=100% height=100px ></iframe>
+      </div>
+      <h2>Local Variables</h2>
+      <pre>Variables declared within a JavaScript function, become LOCAL to the function.
+
+Local variables can only be accessed from within the function.</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>// code here can NOT use carName
+
+function myFunction() {
+  var carName = "Volvo";
+  // code here CAN use carName
+}
+
+// code here can NOT use carName</pre>
+        <iframe src="Attachments/func5.html" title="Example5" width=100% ></iframe>
+      </div>
+      <pre>Since local variables are only recognized inside their functions, variables with the same name can
+be used in different functions.
+
+Local variables are created when a function starts, and deleted when the function is completed.</pre>
+      <div class="example">
+        <h3 align=center>Assignment</h3>
+        <pre>1. Take a number input from user and Create a recurring function to access that value and find its factorial.
+
+Also find the no. of times the functin is being called for that particular input.</pre>
+      </div>
+      <div class="example">
+        <h3 align = "center">Quiz</h3>
+        <iframe src="Attachments/function_quiz.html" title="quiz" width=100% height=600px ></iframe>
+      </div>
+</div>
+<ul style="width:90%; overflow:hidden; margin:50px;background-color:white;">
+      <li style="float:left;background-color:red;"><a href="06forms.html">Prev</a></li>
+      <li style="float:right;background-color:red;"><a href="08objects.html">Next</a></li>
+</ul>
+</body>
+</html> 

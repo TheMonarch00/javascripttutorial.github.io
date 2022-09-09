@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>JavaScript Variables</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      .head {
+        height:100px;
+        font-family: 'Courier New', monospace;
+        color:Yellow;
+        background-color: Black;
+        }
+      ul {
+        float:left;
+        width:13%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: Red;
+        position:sticky;
+        margin-top:15px;
+        }
+      li a{
+        border:1px solid black;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+      li a:hover {
+        background-color:Grey;
+        }
+      img {
+        float:left;
+        width:100px;
+        height:100px;
+        }
+      .body {
+        padding:5px;
+        margin-top:15px;
+        margin-left:15%;
+        margin-right:15%;
+        background-color:LightGrey;
+        font-family: "Trirong", serif;
+        font-size:15px;
+        border:1px solid black;
+        }
+      h2 {
+        font-size:30px;
+        font-family: "Audiowide", sans-serif;
+        text-align: center;
+        }
+      .example {
+        background-color:white;
+        padding:10px;
+        margin:5px;
+        }
+    </style>
+  </head>
+  <body style="background-color:#fce38a;">
+    <div class="head">
+      <h1 style="text-align:center;"><img src="Attachments/logo.png"><br>JAVA SCRIPT TUTORIAL</h>
+    </div>
+    <ul>
+      <li><a href="01home.html">Home</a></li>
+      <li><a href="02statements.html">Statements</a></li>
+      <li><a href="03comments.html">Comments</a></li>
+      <li style="background-color: #111;"><a href="04variables.html">Variables</a></li>
+      <li><a href="05operators.html">Operators</a></li>
+      <li><a href="06forms.html">Forms</a></li>
+      <li><a href="07functions.html">Functions</a></li>
+      <li><a href="08objects.html">Objects</a></li>
+      <li><a href="09events.html">Events</a></li>
+      <li><a href="10strings.html">Strings</a></li>
+      <li><a href="11numbers.html">Numbers</a></li>
+      <li><a href="12arrays.html">Arrays</a></li>
+      <li><a href="13dates.html">Dates</a></li>
+      <li><a href="14math.html">Math</a></li>
+      <li><a href="15conditions.html">Conditions</a></li>
+      <li><a href="16loops.html">Loops</a></li>
+      <li><a href="17regexp.html">Regexp</a></li>
+      <li><a href="18errors.html">Errors</a></li>
+      <li><a href="19this.html">this.</a></li>
+      <li><a href="20let.html">Let</a></li>
+      <li><a href="21const.html">Const.</a></li>
+      <li><a href="22classes.html">Classes</a></li>
+      <li><a href="23debugging.html">Debugging</a></li>
+    </ul>
+    <div class="body">
+      <h2>JavaScript Variables</h2>
+      <pre>JavaScript variables are containers for storing data values.
+
+In this example, x, y, and z, are variables, declared with the var keyword:
+</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x = 5;
+var y = 6;
+var z = x + y;</pre>
+        <iframe src="Attachments/var1.html" title="Example1" width=100% height=100px></iframe>
+      </div>
+      <pre>From the example above, you can expect:
+
+x stores the value 5
+y stores the value 6
+z stores the value 11</pre>
+      <h2>Using <em>let</em> and <em>const</em> (2015)</h2>
+      <pre>Before 2015, using the var keyword was the only way to declare a JavaScript variable.
+
+The 2015 version of JavaScript (ES6 - ECMAScript 2015) allows the use of the const keyword to define a variable
+that cannot be reassigned, and the let keyword to define a variable with restricted scope.
+
+Because it is a little complicated to describe the difference between these keywords, and because they are
+not supported in older browsers, the first part of this tutorial will most often use var.</pre>
+      <h2>Much Like Algebra</h2>
+      <p>In this example, <em>price1, price2,</em> and <em>total</em>, are variables:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var price1 = 5;
+var price2 = 6;
+var total = price1 + price2;</pre>
+      <iframe src="Attachments/var2.html" title="Example2" width=100% height=100px></iframe>
+      </div>
+      <pre>In programming, just like in algebra, we use variables (like price1) to hold values.
+
+In programming, just like in algebra, we use variables in expressions (total = price1 + price2).
+
+From the example above, you can calculate the total to be 11.
+
+<em>JavaScript variables are containers for storing data values.</em></pre>
+      <h2>JavaScript Identifiers</h2>
+      <pre>All JavaScript variables must be identified with unique names.
+
+These unique names are called identifiers.
+
+Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+
+The general rules for constructing names for variables (unique identifiers) are:
+
+Names can contain letters, digits, underscores, and dollar signs.
+Names must begin with a letter
+Names can also begin with $ and _ (but we will not use it in this tutorial)
+Names are case sensitive (y and Y are different variables)
+Reserved words (like JavaScript keywords) cannot be used as names
+<em>JavaScript identifiers are case-sensitive.</em></pre>
+      <h2>The Assignment Operator</h2>
+      <pre>In JavaScript, the equal sign (=) is an "assignment" operator, not an "equal to" operator.
+
+This is different from algebra. The following does not make sense in algebra:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>x = x + 5</pre>
+      </div>
+      <pre>In JavaScript, however, it makes perfect sense: it assigns the value of x + 5 to x.
+
+(It calculates the value of x + 5 and puts the result into x. The value of x is incremented by 5.) 
+
+The "equal to" operator is written like == in JavaScript.</pre>
+      <h2>JavaScript Data Types</h2>
+      <pre>JavaScript variables can hold numbers like 100 and text values like "John Doe".
+
+In programming, text values are called text strings.
+
+JavaScript can handle many types of data, but for now, just think of numbers and strings.
+
+Strings are written inside double or single quotes. Numbers are written without quotes.
+
+If you put a number in quotes, it will be treated as a text string.</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var pi = 3.14;
+var person = "John Doe";
+var answer = 'Yes I am!';
+</pre>
+        <iframe src="Attachments/var3.html" title="Example3" width=100% height=150px></iframe>
+      </div>
+      <h2>Declaring (Creating) JavaScript Variables</h2>
+      <pre>Creating a variable in JavaScript is called "declaring" a variable.
+
+You declare a JavaScript variable with the var keyword:</pre>
+      <div class="example">
+        <pre>var carName;</pre>
+      </div>
+      <pre>After the declaration, the variable has no value (technically it has the value of undefined).
+
+To assign a value to the variable, use the equal sign:</pre>
+      <div class="example">
+        <pre>carName = "Volvo"</pre>;
+      </div>
+      <pre>You can also assign a value to the variable when you declare it:</pre>
+      <div class="example">
+        <pre>var carName = "Volvo";</pre>
+      </div>
+      <pre>In the example below, we create a variable called carName and assign the value "Volvo" to it.
+
+Then we "output" the value inside an HTML paragraph with id="demo":</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <iframe src="Attachments/var4.html" title="Example4" width=100% height=100px></iframe>
+      </div>
+      <h2>JavaScript Arithmetic</h2>
+      <p>As with algebra, you can do arithmetic with JavaScript variables, using operators like = and +:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <p>var x = 5 + 2 + 3;</p>
+        <iframe src="Attachments/var5.html" title="Example5" width=100% height=100px></iframe>
+      </div>
+      <p>You can also add strings, but strings will be concatenated:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <p>var x = "John" + " " + "Doe";</p>
+        <iframe src="Attachments/var6.html" title="Example6" width=100% height=100px></iframe>
+      </div>
+      <p>Also try this:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <p>var x = "5" + 2 + 3;</p>
+        <iframe src="Attachments/var7.html" title="Example7" width=100% height=100px></iframe>
+      </div>
+      <pre><en>If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated.</en>
+
+Now try this:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <p>var x = 2 + 3 + "5";</p>
+        <iframe src="Attachments/var8.html" title="Example8" width=100% height=100px></iframe>
+      </div>
+      <h2>JavaScript Dollar Sign $</h2>
+      <pre>Remember that JavaScript identifiers (names) must begin with:
+
+A letter (A-Z or a-z)
+A dollar sign ($)
+Or an underscore (_)
+Since JavaScript treats a dollar sign as a letter, identifiers containing $ are valid variable names:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var $$$ = "Hello World";
+var $ = 2;
+var $myMoney = 5;
+document.getElementById("demo").innerHTML = $ + $myMoney;</pre>
+        <iframe src="Attachments/var9.html" title="Example9" width=100% height=100px></iframe>
+      </div>
+      <p>Using the dollar sign is not very common in JavaScript, but professional programmers often use it as an alias for the main function in a JavaScript library.</p>
+
+<p>In the JavaScript library jQuery, for instance, the main function $ is used to select HTML elements. In jQuery $("p"); means "select all p elements".</p>
+      <h2>JavaScript Underscore (_)</h2>
+      <p>Since JavaScript treats underscore as a letter, identifiers containing _ are valid variable names:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var _x = 2;
+var _100 = 5;
+document.getElementById("demo").innerHTML = _x + _100;</pre>
+        <iframe src="Attachments/var10.html" title="Example10" width=100% height=100px></iframe>
+      </div>
+      <div class="example">
+        <h3 align = "center">Quiz</h3>
+        <iframe src="Attachments/variable_quiz.html" title="quiz" width=100% height=600px></iframe>
+      </div>
+</div>
+<ul style="width:90%; overflow:hidden; margin:50px;background-color:white; ">
+      <li style="float:left;background-color:red;"><a href="03comments.html">Prev</a></li>
+      <li style="float:right;background-color:red;"><a href="05operators.html">Next</a></li>
+</body>
+</html>

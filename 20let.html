@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>JavaScript Let</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      .head {
+        height:100px;
+        font-family: 'Courier New', monospace;
+        color:Yellow;
+        background-color: Black;
+        }
+      ul {
+        float:left;
+        width:13%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: Red;
+        position:sticky;
+        margin-top:15px;
+        }
+      li a{
+        border:1px solid black;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+      li a:hover {
+        background-color:Grey;
+        }
+      img {
+        float:left;
+        width:100px;
+        height:100px;
+        }
+      .body {
+        padding:5px;
+        margin-top:15px;
+        margin-left:15%;
+        margin-right:15%;
+        background-color:LightGrey;
+        font-family: "Trirong", serif;
+        font-size:15px;
+        border:1px solid black;
+        }
+      h2 {
+        font-size:30px;
+        font-family: "Audiowide", sans-serif;
+        text-align: center;
+        }
+      .example {
+        background-color:white;
+        padding:10px;
+        margin:5px;
+        }
+    </style>
+  </head>
+  <body style="background-color:#fce38a;">
+    <div class="head">
+      <h1 style="text-align:center;"><img src="Attachments/logo.png"><br>JAVA SCRIPT TUTORIAL</h>
+    </div>
+    <ul>
+      <li><a href="01home.html">Home</a></li>
+      <li><a href="02statements.html">Statements</a></li>
+      <li><a href="03comments.html">Comments</a></li>
+      <li><a href="04variables.html">Variables</a></li>
+      <li><a href="05operators.html">Operators</a></li>
+      <li><a href="06forms.html">Forms</a></li>
+      <li><a href="07functions.html">Functions</a></li>
+      <li><a href="08objects.html">Objects</a></li>
+      <li><a href="09events.html"<>Events</a></li>
+      <li><a href="10strings.html">Strings</a></li>
+      <li><a href="11numbers.html">Numbers</a></li>
+      <li><a href="12arrays.html">Arrays</a></li>
+      <li><a href="13dates.html">Dates</a></li>
+      <li><a href="14math.html">Math</a></li>
+      <li><a href="15conditions.html">Conditions</a></li>
+      <li><a href="16loops.html">Loops</a></li>
+      <li><a href="17regexp.html">Regexp</a></li>
+      <li><a href="18errors.html">Errors</a></li>
+      <li><a href="19this.html">this.</a></li>
+      <li style="background-color: #111;"><a href="20let.html">Let</a></li>
+      <li><a href="21const.html">Const.</a></li>
+      <li><a href="22classes.html">Classes</a></li>
+      <li><a href="23debugging.html">Debugging</a></li>
+    </ul>
+    <div class="body">
+      <h2>JavaScript Let</h2>
+      <h2>ECMAScript 2015</h2>
+      <pre>ES2015 introduced two important new JavaScript keywords: <b>let</b> and <b>const.</b>
+
+These two keywords provide <b>Block Scope</b> variables (and constants) in JavaScript.
+
+Before ES2015, JavaScript had only two types of scope: <b>Global Scope and Function Scope.</b> </pre>
+      <h2>Global Scope</h2>
+      <p>Variables declared <b>Globally</b> (outside any function) have <b>Global Scope.</b></p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var carName = "Volvo";
+
+<b>// code here can use carName</b>
+
+function myFunction() {
+  <b>// code here can also use carName</b>
+}</pre>
+      </div>
+      <p><b>Global</b> variables can be accessed from anywhere in a JavaScript program.</p>
+      <h2>Function Scope</h2>
+      <p>Variables declared <b>Locally</b> (inside a function) have <b>Function Scope.</b></p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre><b>// code here can NOT use carName</b>
+
+function myFunction() {
+  var carName = "Volvo";
+  <b>// code here CAN use carName</b>
+}
+
+<b>// code here can NOT use carName</b></pre>
+      </div>
+      <p><b>Local</b> variables can only be accessed from inside the function where they are declared.</p>
+      <h2>Block Scope</h2>
+      <pre>Variables declared with the <b>var</b> keyword cannot have <b>Block Scope.</b>
+
+Variables declared inside a block <b>{}</b> can be accessed from outside the block.</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>{
+  var x = 2;
+}
+<b>// x CAN be used here</b></pre>
+      </div>
+      <pre>Before ES2015 JavaScript did not have <b>Block Scope.</b>
+
+Variables declared with the let keyword can have Block Scope.
+
+Variables declared inside a block <b>{}</b> cannot be accessed from outside the block:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>{
+  let x = 2;
+}
+<b>// x can NOT be used here</b></pre>
+      </div>
+      <h2>Redeclaring Variables</h2>
+      <pre>Redeclaring a variable using the <b>var</b> keyword can impose problems.
+
+Redeclaring a variable inside a block will also redeclare the variable outside the block:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x = 10;
+<b>// Here x is 10</b>
+{
+  var x = 2;
+  <b>// Here x is 2</b>
+}
+<b>// Here x is 2</b></pre>
+      </div>
+      <pre>Redeclaring a variable using the <b>let</b> keyword can solve this problem.
+
+Redeclaring a variable inside a block will not redeclare the variable outside the block:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x = 10;
+<b>// Here x is 10</b>
+{
+  let x = 2;
+  <b>// Here x is 2</b>
+}
+<b>// Here x is 10</b></pre>
+      </div>
+      <h2>Loop Scope</h2>
+      <p>Using <b>var</b> in a loop:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var i = 5;
+for (var i = 0; i < 10; i++) {
+  <b>// some statements</b>
+}
+<b>// Here i is 10</b></pre>
+      </div>
+      <p>Using let in a loop:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>let i = 5;
+for (let i = 0; i < 10; i++) {
+  <b>// some statements</b>
+}
+<b>// Here i is 5</b></pre>
+      </div>
+      <pre>In the first example, using <b>var</b>, the variable declared in the loop redeclares the variable outside the loop.
+
+In the second example, using <b>let</b>, the variable declared in the loop does not redeclare the variable outside the loop.
+
+When <b>let</b> is used to declare the i variable in a loop, the i variable will only be visible within the loop.</pre>
+      <h2>Redeclaring</h2>
+      <p>Redeclaring a JavaScript <b>var</b> variable is allowed anywhere in a program:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x = 2;
+
+<b>// Now x is 2</b>
+ 
+var x = 3;
+
+<b>// Now x is 3</b></pre>
+      </div>
+      <p>Redeclaring a <b>var</b> variable with <b>let</b>, in the same scope, or in the same block, is not allowed:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x = 2;         <b>// Allowed</b>
+let x = 3;       <b>// Not allowed</b>
+{
+  var x = 4;     <b>// Allowed</b>
+  let x = 5;   <b>// Not allowed</b>
+}</pre>
+      </div>
+      <p>Redeclaring a let variable with let, in the same scope, or in the same block, is not allowed:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>let x = 2;       <b>// Allowed</b>
+let x = 3;       <b>// Not allowed</b>
+
+{
+  let x = 4;   <b>// Allowed</b>
+  let x = 5;   <b>// Not allowed</b>
+}</pre>
+      </div>
+      <p>Redeclaring a <b>let</b> variable with <b>var</b>, in the same scope, or in the same block, is not allowed:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>let x = 2;       <b>// Allowed</b>
+var x = 3;       <b>// Not allowed</b>
+
+{
+  let x = 4;   <b>// Allowed</b>
+  var x = 5;   <b>// Not allowed</b>
+}</pre>
+      </div>
+      <p>Redeclaring a variable with <b>let</b>, in another scope, or in another block, is allowed:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>let x = 2;       <b>// Allowed</b>
+
+{
+  let x = 3;   <b>// Allowed</b>
+}
+
+{
+  let x = 4;   <b>// Allowed</b>
+}</pre>
+      </div>
+      <h2>Hoisting</h2>
+      <pre>Variables defined with <b>var</b> are <b>hoisted</b> to the top and can be initialized at any time.
+
+Meaning: You can use the variable before it is declared:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>This is OK:
+
+carName = "Volvo";
+alert(carName);
+var carName;</pre>
+      </div>
+      <pre>Variables defined with <b>let</b> are hoisted to the top of the block, but not initialized.
+
+Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared.
+
+Using a <b>let</b> variable before it is declared will result in a <b>ReferenceError</b>.
+
+The variable is in a "temporal dead zone" from the start of the block until it is declared.</pre> 
+</div>
+<ul style="width:90%; overflow:hidden; margin:50px;background-color:white;">
+      <li style="float:left;background-color:red;"><a href="19this.html">Prev</a></li>
+      <li style="float:right;background-color:red;"><a href="21const.html">Next</a></li>
+</ul>
+</body>
+</html>

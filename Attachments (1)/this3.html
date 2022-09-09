@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>In strict mode, <b>this</b> is <b>undefined</b>, because strict mode does not allow default binding:</p>
+
+<p id="demo"></p>
+
+<script>
+"use strict";
+document.getElementById("demo").innerHTML = myFunction();
+function myFunction() {
+  return this;
+}
+</script>
+
+</body>
+</html>

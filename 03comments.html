@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>JavaScript Comments</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      .head {
+        height:100px;
+        font-family: 'Courier New', monospace;
+        color:Yellow;
+        background-color: Black;
+        }
+      ul {
+        float:left;
+        width:13%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: Red;
+        position:sticky;
+        margin-top:15px;
+        }
+      li a{
+        border:1px solid black;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+      li a:hover {
+        background-color:Grey;
+        }
+      img {
+        float:left;
+        width:100px;
+        height:100px;
+        }
+      .body {
+        padding:5px;
+        margin-top:15px;
+        margin-left:15%;
+        margin-right:15%;
+        background-color:LightGrey;
+        font-family: "Trirong", serif;
+        font-size:15px;
+        border:1px solid black;
+        }
+      h2 {
+        font-size:30px;
+        font-family: "Audiowide", sans-serif;
+        text-align: center;
+        }
+      .example {
+        background-color:white;
+        padding:10px;
+        margin:5px;
+        }
+    </style>
+  </head>
+  <body style="background-color:#fce38a;">
+    <div class="head">
+      <h1 style="text-align:center;"><img src="Attachments/logo.png"><br>JAVA SCRIPT TUTORIAL</h>
+    </div>
+    <ul>
+      <li><a href="01home.html">Home</a></li>
+      <li><a href="02statements.html">Statements</a></li>
+      <li style="background-color: #111;"><a href="03comments.html">Comments</a></li>
+      <li><a href="04variables.html">Variables</a></li>
+      <li><a href="05operators.html">Operators</a></li>
+      <li><a href="06forms.html">Forms</a></li>
+      <li><a href="07functions.html">Functions</a></li>
+      <li><a href="08objects.html">Objects</a></li>
+      <li><a href="09events.html">Events</a></li>
+      <li><a href="10strings.html">Strings</a></li>
+      <li><a href="11numbers.html">Numbers</a></li>
+      <li><a href="12arrays.html">Arrays</a></li>
+      <li><a href="13dates.html">Dates</a></li>
+      <li><a href="14math.html">Math</a></li>
+      <li><a href="15conditions.html">Conditions</a></li>
+      <li><a href="16loops.html">Loops</a></li>
+      <li><a href="17regexp.html">Regexp</a></li>
+      <li><a href="18errors.html">Errors</a></li>
+      <li><a href="19this.html">this.</a></li>
+      <li><a href="20let.html">Let</a></li>
+      <li><a href="21const.html">Const.</a></li>
+      <li><a href="22classes.html">Classes</a></li>
+      <li><a href="23debugging.html">Debugging</a></li>
+    </ul>
+    <div class="body">
+      <h2>JavaScript Comments</h2>
+      <pre>JavaScript comments can be used to explain JavaScript code, and to make it more readable.
+
+JavaScript comments can also be used to prevent execution, when testing alternative code.
+
+</pre>
+      <h2>Single Line Comments</h2>
+      <pre>Single line comments start with //.
+
+Any text between // and the end of the line will be ignored by JavaScript (will not be executed).
+
+This example uses a single-line comment before each code line:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>// Change heading:
+document.getElementById("myH").innerHTML = "My First Page";
+
+// Change paragraph:
+document.getElementById("myP").innerHTML = "My first paragraph.";</pre>
+      </div>
+      <p>This example uses a single line comment at the end of each line to explain the code:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x = 5;      // Declare x, give it the value of 5
+var y = x + 2;  // Declare y, give it the value of x + 2</pre>
+      </div>
+      <h2>Multi-line Comments</h2>
+      <pre>
+Multi-line comments start with " /* " and end with " */ ".
+
+Any text between " /* " and " */ " will be ignored by JavaScript.
+
+This example uses a multi-line comment (a comment block) to explain the code:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>/*
+The code below will change
+the heading with id = "myH"
+and the paragraph with id = "myP"
+in my web page:
+*/
+document.getElementById("myH").innerHTML = "My First Page";
+document.getElementById("myP").innerHTML = "My first paragraph.";</pre>
+      </div>
+      <pre><em>It is most common to use single line comments.
+Block comments are often used for formal documentation.</em></pre>
+      <h2>Using Comments to Prevent Execution</h2>
+      <pre>Using comments to prevent execution of code is suitable for code testing.
+
+Adding // in front of a code line changes the code lines from an executable line to a comment.
+
+This example uses // to prevent execution of one of the code lines:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>//document.getElementById("myH").innerHTML = "My First Page";
+document.getElementById("myP").innerHTML = "My first paragraph.";</pre>
+      </div>
+      <p>This example uses a comment block to prevent execution of multiple lines:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>/*
+document.getElementById("myH").innerHTML = "My First Page";
+document.getElementById("myP").innerHTML = "My first paragraph.";
+*/</pre>
+      </div>
+</div>
+<ul style="width:90%; overflow:hidden; margin:50px;background-color:white; ">
+      <li style="float:left;background-color:red;"><a href="02statements.html">Prev</a></li>
+      <li style="float:right;background-color:red;"><a href="04variables.html">Next</a></li>
+</body>
+</html>

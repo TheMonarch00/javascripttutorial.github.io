@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>JavaScript Forms</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      .head {
+        height:100px;
+        font-family: 'Courier New', monospace;
+        color:Yellow;
+        background-color: Black;
+        }
+      ul {
+        float:left;
+        width:13%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: Red;
+        position:sticky;
+        margin-top:15px;
+        }
+      li a{
+        border:1px solid black;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+      li a:hover {
+        background-color:Grey;
+        }
+      img {
+        float:left;
+        width:100px;
+        height:100px;
+        }
+      .body {
+        padding:5px;
+        margin-top:15px;
+        margin-left:15%;
+        margin-right:15%;
+        background-color:LightGrey;
+        font-family: "Trirong", serif;
+        font-size:15px;
+        border:1px solid black;
+        }
+      h2 {
+        font-size:30px;
+        font-family: "Audiowide", sans-serif;
+        text-align: center;
+        }
+      .example {
+        background-color:white;
+        padding:10px;
+        margin:5px;
+        }
+    </style>
+  </head>
+  <body style="background-color:#fce38a;">
+    <div class="head">
+      <h1 style="text-align:center;"><img src="Attachments/logo.png"><br>JAVA SCRIPT TUTORIAL</h>
+    </div>
+    <ul>
+      <li><a href="01home.html">Home</a></li>
+      <li><a href="02statements.html">Statements</a></li>
+      <li><a href="03comments.html">Comments</a></li>
+      <li><a href="04variables.html">Variables</a></li>
+      <li><a href="05operators.html">Operators</a></li>
+      <li style="background-color: #111;"><a href="06forms.html">Forms</a></li>
+      <li><a href="07functions.html">Functions</a></li>
+      <li><a href="08objects.html">Objects</a></li>
+      <li><a href="09events.html">Events</a></li>
+      <li><a href="10strings.html">Strings</a></li>
+      <li><a href="11numbers.html">Numbers</a></li>
+      <li><a href="12arrays.html">Arrays</a></li>
+      <li><a href="13dates.html">Dates</a></li>
+      <li><a href="14math.html">Math</a></li>
+      <li><a href="15conditions.html">Conditions</a></li>
+      <li><a href="16loops.html">Loops</a></li>
+      <li><a href="17regexp.html">Regexp</a></li>
+      <li><a href="18errors.html">Errors</a></li>
+      <li><a href="19this.html">this.</a></li>
+      <li><a href="20let.html">Let</a></li>
+      <li><a href="21const.html">Const.</a></li>
+      <li><a href="22classes.html">Classes</a></li>
+      <li><a href="23debugging.html">Debugging</a></li>
+    </ul>
+    <div class="body">
+      <h2>JavaScript Forms</h2>
+      <h2>JavaScript Form Validation</h2>
+      <pre>HTML form validation can be done by JavaScript.
+
+If a form field (fname) is empty, this function alerts a message, and returns false, to prevent the form from being submitted:</pre>
+      <div class="example">
+        <h3>JavaScript Example</h3>
+        <pre>function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}</pre>
+      </div>
+      <p>The function can be called when the form is submitted:</p>
+      <div class="example">
+        <h3>HTML Form Example</h3>
+        <iframe src="Attachments/form1.html" title="Example1" width=100% height=100px></iframe>
+      </div>
+      <h2>JavaScript Can Validate Numeric Input</h2>
+      <p>JavaScript is often used to validate numeric input:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <iframe src="Attachments/form2.html" title="Example2" width=100% height=110px></iframe>
+      </div>
+      <h2>Automatic HTML Form Validation</h2>
+      <pre>HTML form validation can be performed automatically by the browser:
+
+If a form field (fname) is empty, the required attribute prevents this form from being submitted:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <iframe src="Attachments/form3.html" title="Example3" width=100% height=100px ></iframe>
+      </div>
+      <h2>Data Validation</h2>
+      <pre>Data validation is the process of ensuring that user input is clean, correct, and useful.
+
+Typical validation tasks are:
+
+has the user filled in all required fields?
+has the user entered a valid date?
+has the user entered text in a numeric field?
+Most often, the purpose of data validation is to ensure correct user input.
+
+Validation can be defined by many different methods, and deployed in many different ways.
+
+<b>Server side validation</b> is performed by a web server, after input has been sent to the server.
+
+<b>Client side validation</b> is performed by a web browser, before input is sent to a web server.</pre>
+      <h2>HTML Constraint Validation</h2>
+      <pre>HTML5 introduced a new HTML validation concept called constraint validation.
+
+HTML constraint validation is based on:
+
+Constraint validation <b>HTML Input Attributes</b>
+Constraint validation <b>CSS Pseudo Selectors</b>
+Constraint validation <b>DOM Properties and Methods</b></pre>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Attribute</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>disabled</td>
+          <td>Specifies that the input element should be disabled</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>max</td>
+          <td>Specifies the maximum value of an input element</td>
+        </tr>
+        <tr>
+          <td>min</td>
+          <td>Specifies the minimum value of an input element</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>pattern</td>
+          <td>Specifies the value pattern of an input element</td>
+        </tr>
+        <tr>
+          <td>required</td>
+          <td>Specifies that the input field requires an element</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>type</td>
+          <td>Specifies the type of an input element</td>
+        </tr>
+      </table>
+      <h2>Constraint Validation CSS Pseudo Selectors</h2>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Selector</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>:disabled</td>
+          <td>Selects input elements with the "disabled" attribute specified</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>:invalid</td>
+          <td>Selects input elements with invalid values</td>
+        </tr>
+        <tr>
+          <td>:optional</td>
+          <td>Selects input elements with no "required" attribute specified</td>
+        </tr>
+        <tr>
+          <td>:required</td>
+          <td>Selects input elements with the "required" attribute specified</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>:valid</td>
+          <td>Selects input elements with valid values</td>
+        </tr>
+      </table>
+      <h2>Constraint Validation DOM Methods</h2>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>checkValidity()</td>
+          <td>Returns true if an input element contains valid data.</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>setCustomValidity()</td>
+          <td>Sets the validationMessage property of an input element.</td>
+        </tr>
+      </table>
+      <p>If an input field contains invalid data, display a message:</p>
+      <div class="example">
+        <h3>The checkValidity() Method</h3>
+        <iframe src="Attachments/form4.html" title="Example4" width=100% ></iframe>
+      </div>
+      <h2>Constraint Validation DOM Methods</h2>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>validity</td>
+          <td>Contains boolean properties related to the validity of an input element.</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>validationMessage</td>
+          <td>Contains the message a browser will display when the validity is false.</td>
+        </tr>
+        <tr>
+          <td>willValidity</td>
+          <td>Indicates if an input element will be validated.</td>
+        </tr>
+      </table>
+      <h2>Validity Properties</h2>
+      <p>The <b>validity property</b> of an input element contains a number of properties related to the validity of data:</p>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>customError</td>
+          <td>Set to true, if a custom validity message is set.</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>patternMismatch</td>
+          <td>Set to true, if an element's value does not match its pattern attribute.</td>
+        </tr>
+        <tr>
+          <td>rangeOverflow</td>
+          <td>Set to true, if an element's value is greater than its max attribute.</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>rangeUnderflow</td>
+          <td>Set to true, if an element's value is less than its min attribute.</td>
+        </tr>
+        <tr>
+          <td>stepMismatch</td>
+          <td>	Set to true, if an element's value is invalid per its step attribute.</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>tooLong</td>
+          <td>	Set to true, if an element's value exceeds its maxLength attribute.</td>
+        </tr>
+        <tr>
+          <td>typeMismatch</td>
+          <td>	Set to true, if an element's value is invalid per its type attribute.</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>valueMissing</td>
+          <td>	Set to true, if an element (with a required attribute) has no value.</td>
+        </tr>
+        <tr>
+          <td>valid</td>
+          <td>	Set to true, if an element's value is valid.</td>
+        </tr>
+      </table>
+      <div class="example">
+        <h3>The rangeUnderflow Property</h3>
+        <iframe src="Attachments/form5.html" title="Example5" width=100% ></iframe>
+      </div>
+      <div class="example">
+        <h3>The rangeOverflow Property</h3>
+        <iframe src="Attachments/form6.html" title="Example6" width=100% ></iframe>
+      </div>
+      <div class="example">
+        <h3 align=center>Assignment</h3>
+        <pre>1. Create a Registration form for a swimming competition with input fields of Name, Gender,
+Date Of Birth, Address, Contact No., Email, Height, Weight with following constraints
+	a. Age = 18 to 20
+        b. Height  >= 150cm
+        c. Weight >= 55kg for boys and >= 45kg for girls</pre>
+      </div>
+</div>
+<ul style="width:90%; overflow:hidden; margin:50px;background-color:white;">
+      <li style="float:left;background-color:red;"><a href="05operators.html">Prev</a></li>
+      <li style="float:right;background-color:red;"><a href="07functions.html">Next</a></li>
+</ul>
+</body>
+</html>

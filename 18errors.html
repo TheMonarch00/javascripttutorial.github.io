@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>JavaScript Errors</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      .head {
+        height:100px;
+        font-family: 'Courier New', monospace;
+        color:Yellow;
+        background-color: Black;
+        }
+      ul {
+        float:left;
+        width:13%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: Red;
+        position:sticky;
+        margin-top:15px;
+        }
+      li a{
+        border:1px solid black;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+      li a:hover {
+        background-color:Grey;
+        }
+      img {
+        float:left;
+        width:100px;
+        height:100px;
+        }
+      .body {
+        padding:5px;
+        margin-top:15px;
+        margin-left:15%;
+        margin-right:15%;
+        background-color:LightGrey;
+        font-family: "Trirong", serif;
+        font-size:15px;
+        border:1px solid black;
+        }
+      h2 {
+        font-size:30px;
+        font-family: "Audiowide", sans-serif;
+        text-align: center;
+        }
+      .example {
+        background-color:white;
+        padding:10px;
+        margin:5px;
+        }
+    </style>
+  </head>
+  <body style="background-color:#fce38a;">
+    <div class="head">
+      <h1 style="text-align:center;"><img src="Attachments/logo.png"><br>JAVA SCRIPT TUTORIAL</h>
+    </div>
+    <ul>
+      <li><a href="01home.html">Home</a></li>
+      <li><a href="02statements.html">Statements</a></li>
+      <li><a href="03comments.html">Comments</a></li>
+      <li><a href="04variables.html">Variables</a></li>
+      <li><a href="05operators.html">Operators</a></li>
+      <li><a href="06forms.html">Forms</a></li>
+      <li><a href="07functions.html">Functions</a></li>
+      <li><a href="08objects.html">Objects</a></li>
+      <li><a href="09events.html"<>Events</a></li>
+      <li><a href="10strings.html">Strings</a></li>
+      <li><a href="11numbers.html">Numbers</a></li>
+      <li><a href="12arrays.html">Arrays</a></li>
+      <li><a href="13dates.html">Dates</a></li>
+      <li><a href="14math.html">Math</a></li>
+      <li><a href="15conditions.html">Conditions</a></li>
+      <li><a href="16loops.html">Loops</a></li>
+      <li><a href="17regexp.html">Regexp</a></li>
+      <li style="background-color: #111;"><a href="18errors.html">Errors</a></li>
+      <li><a href="19this.html">this.</a></li>
+      <li><a href="20let.html">Let</a></li>
+      <li><a href="21const.html">Const.</a></li>
+      <li><a href="22classes.html">Classes</a></li>
+      <li><a href="23debugging.html">Debugging</a></li>
+    </ul>
+    <div class="body">
+      <h2>JavaScript Errors - Throw and Try to Catch</h2>
+      <pre>The <b>try</b> statement lets you test a block of code for errors.
+
+The <b>catch</b> statement lets you handle the error.
+
+The <b>throw</b> statement lets you create custom errors.
+
+The <b>finally</b> statement lets you execute code, after try and catch, regardless of the result.</pre>
+      <h2>Errors Will Happen!</h2>
+      <pre>When executing JavaScript code, different errors can occur.
+
+Errors can be coding errors made by the programmer, errors due to wrong input, and other unforeseeable things.</pre>
+      <h2>JavaScript try and catch</h2>
+      <pre>The <b>try</b> statement allows you to define a block of code to be tested for errors while it is being executed.
+
+The <b>catch</b> statement allows you to define a block of code to be executed, if an error occurs in the try block.
+
+The JavaScript statements <b>try</b> and <b>catch</b> come in pairs:</pre>
+      <div class="example">
+        <h3>Syntax</h3>
+        <pre>try {
+  Block of code to try
+}
+catch(err) {
+  Block of code to handle errors
+}</pre>
+      </div>
+      <h2>JavaScript Throws Errors</h2>
+      <pre>When an error occurs, JavaScript will normally stop and generate an error message.
+
+The technical term for this is: JavaScript will <b>throw an exception (throw an error).</b>
+
+<em>JavaScript will actually create an <b>Error object</b> with two properties: <b>name</b> and <b>message.</b></em></pre>
+      <h2>The throw Statement</h2>
+      <pre>The <b>throw</b> statement allows you to create a custom error.
+
+Technically you can <b>throw an exception (throw an error).</b>
+
+The exception can be a JavaScript <b>String</b>, a <b>Number</b>, a <b>Boolean</b> or an <b>Object</b>:</pre>
+      <div class="example">
+        <h3>Syntax</h3>
+        <pre>throw "Too big";    <b>// throw a text</b>
+throw 500;          <b>// throw a number</b></pre>
+      </div>
+      <p>If you use <b>throw</b> together with <b>try</b> and <b>catch</b>, you can control program flow and generate custom error messages.</p>
+      <h2>Input Validation Example</h2>
+      <pre>This example examines input. If the value is wrong, an exception (err) is thrown.
+
+The exception (err) is caught by the catch statement and a custom error message is displayed:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>function myFunction() {
+  var message, x;
+  message = document.getElementById("p01");
+  message.innerHTML = "";
+  x = document.getElementById("demo").value;
+  if((x >= 5) && (x <=10)) {message.innerHTML = "Input is valid" ;}
+  try {
+    if(x == "") throw "empty";
+    if(isNaN(x)) throw "not a number";
+    x = Number(x);
+    if(x < 5) throw "too low";
+    if(x > 10) throw "too high";
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
+}</pre>
+      <iframe src="Attachments/error1.html" title="Example1" width=100% height=130px></iframe>
+      </div>
+      <h2>HTML Validation</h2>
+      <pre>The code above is just an example.
+
+Modern browsers will often use a combination of JavaScript and built-in HTML validation,
+using predefined validation rules defined in HTML attributes:</pre>
+      <h2>The finally Statements</h2>
+      <p>The <b>finally</b> statement lets you execute code, after try and catch, regardless of the result:</p>
+      <div class="example">
+        <h3>Syntax</h3>
+        <pre>try {
+  Block of code to try
+}
+catch(err) {
+  Block of code to handle errors
+}
+finally {
+  Block of code to be executed regardless of the try / catch result
+}</pre>
+      </div>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>function myFunction() {
+  var message, x;
+  message = document.getElementById("p01");
+  message.innerHTML = "";
+  x = document.getElementById("demo").value;
+  try {
+    if(x == "") throw "is empty";
+    if(isNaN(x)) throw "is not a number";
+    x = Number(x);
+    if(x > 10) throw "is too high";
+    if(x < 5) throw "is too low";
+  }
+  catch(err) {
+    message.innerHTML = "Error: " + err + ".";
+  }
+  finally {
+    document.getElementById("demo").value = "";
+  }
+}</pre>
+        <iframe src="Attachments/error2.html" title="Example2" width=100% height=100px></iframe>
+      </div>
+      <h2>The Error Object</h2>
+      <pre>JavaScript has a built in error object that provides error information when an error occurs.
+
+The error object provides two useful properties: name and message.</pre>
+      <h2>Error Object Properties</h2>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>name</td>
+          <td>	Sets or returns an error name</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>message</td>
+          <td>Sets or returns an error message (a string)</td>
+        </tr>
+      </table>
+      <h2>Error Name Values</h2>
+      <p>Six different values can be returned by the error name property:</p>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Error name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>EvalError</td>
+          <td>An error has occurred in the eval() function</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>RangeError</td>
+          <td>	A number "out of range" has occurred</td>
+        </tr>
+        <tr>
+          <td>ReferenceError</td>
+          <td>An illegal reference has occurred</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>SyntaxError</td>
+          <td>A syntax error has occurred</td>
+        </tr>
+        <tr>
+          <td>TypeError</td>
+          <td>A type error has occurred</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>URIError</td>
+          <td>An error in encodeURI() has occurred</td>
+        </tr>
+      </table>
+      <p>The six different values are described below.</p>
+      <h2>Eval Error</h2>
+      <pre>An <b>EvalError</b> indicates an error in the eval() function.
+
+<em>Newer versions of JavaScript do not throw EvalError. Use SyntaxError instead.</em></pre>
+      <h2>Range Error</h2>
+      <pre>A <b>RangeError</b> is thrown if you use a number that is outside the range of legal values.
+
+For example: You cannot set the number of significant digits of a number to 500.</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var num = 1;
+try {
+  num.toPrecision(500);   <b>// A number cannot have 500 significant digits</b>
+}
+catch(err) {
+  document.getElementById("demo").innerHTML = err.name;
+}
+</pre>
+        <iframe src="Attachments/error3.html" title="Example3" width=100% height=100px></iframe>
+      </div>
+      <h2>Reference Error</h2>
+      <p>A <b>ReferenceError</b> is thrown if you use (reference) a variable that has not been declared:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var x;
+try {
+  x = y + 1;   // y cannot be referenced (used)
+}
+catch(err) {
+  document.getElementById("demo").innerHTML = err.name;
+}</pre>
+        <iframe src="Attachments/error4.html" title="Example4" width=100% height=100px></iframe>
+      </div>
+      <h2>Syntax Error</h2>
+      <p>A <b>SyntaxError</b> is thrown if you try to evaluate code with a syntax error.</p>
+      <div class="example">
+        <h3>try {
+  eval("alert('Hello)");   // Missing ' will produce an error
+}
+catch(err) {
+  document.getElementById("demo").innerHTML = err.name;
+}</pre>
+        <iframe src="Attachments/error5.html" title="Example5" width=100% height=100px></iframe>
+      </div>
+      <h2>Type Error</h2>
+      <p>A <b>TypeError</b> is thrown if you use a value that is outside the range of expected types:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var num = 1;
+try {
+  num.toUpperCase();   // You cannot convert a number to upper case
+}
+catch(err) {
+  document.getElementById("demo").innerHTML = err.name;
+}</pre>
+        <iframe src="Attachments/error6.html" title="Example6" width=100% height=100px></iframe>
+      </div>
+      <h2>URI (Uniform Resource Identifier) Error</h2>
+      <p>A <b>URIError</b> is thrown if you use illegal characters in a URI function:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>try {
+  decodeURI("%%%");   // You cannot URI decode percent signs
+}
+catch(err) {
+  document.getElementById("demo").innerHTML = err.name;
+}</pre>
+        <iframe src="Attachments/error7.html" title="Example7" width=100% height=100px></iframe>
+      </div>
+      <h2>Non-Standard Error Object Properties</h2>
+      <pre>Mozilla and Microsoft defines some non-standard error object properties:
+
+fileName (Mozilla)
+lineNumber (Mozilla)
+columnNumber (Mozilla)
+stack (Mozilla)
+description (Microsoft)
+number (Microsoft)
+
+<b>Do not use these properties in public web sites. They will not work in all browsers.</b></pre>
+      <div class="example">
+        <h3 align=center>Assignment</h3>
+        <pre>1. Write a script which has error like variable not declared or function does not exist and see
+how the browser behave for such an error.
+
+2. Write the erroneous code written in the above program inside a try block and catch the error in catch block and
+display the caught error.
+
+3. Make a syntax error in the catch block and try to catch it in catch block.
+
+4. Use a finally block after the catch block to see when it gets executed
+
+5. Extract the name, message and stack from the error object in the catch block
+
+6. define a custom error ectending it from Error and use it in the try block to throw it and catch it in the catch block.
+
+7.Create a form with name as input text field. If the name entered by the user contains digits throw it as a
+validation error catch it in the catch block and print a message by the side of the text field that the name
+field cannot have digits in it.</pre>
+      </div>
+</div>
+<ul style="width:90%; overflow:hidden; margin:50px;background-color:white;">
+      <li style="float:left;background-color:red;"><a href="17regexp.html">Prev</a></li>
+      <li style="float:right;background-color:red;"><a href="19this.html">Next</a></li>
+</ul>
+</body>
+</html>

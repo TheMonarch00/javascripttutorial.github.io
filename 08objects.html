@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>JavaScript Objects</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <style>
+      .head {
+        height:100px;
+        font-family: 'Courier New', monospace;
+        color:Yellow;
+        background-color: Black;
+        }
+      ul {
+        float:left;
+        width:13%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+        background-color: Red;
+        position:sticky;
+        margin-top:15px;
+        }
+      li a{
+        border:1px solid black;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+      li a:hover {
+        background-color:Grey;
+        }
+      img {
+        float:left;
+        width:100px;
+        height:100px;
+        }
+      .body {
+        padding:5px;
+        margin-top:15px;
+        margin-left:15%;
+        margin-right:15%;
+        background-color:LightGrey;
+        font-family: "Trirong", serif;
+        font-size:15px;
+        border:1px solid black;
+        }
+      h2 {
+        font-size:30px;
+        font-family: "Audiowide", sans-serif;
+        text-align: center;
+        }
+      .example {
+        background-color:white;
+        padding:10px;
+        margin:5px;
+        }
+    </style>
+  </head>
+  <body style="background-color:#fce38a;">
+    <div class="head">
+      <h1 style="text-align:center;"><img src="Attachments/logo.png"><br>JAVA SCRIPT TUTORIAL</h>
+    </div>
+    <ul>
+      <li><a href="01home.html">Home</a></li>
+      <li><a href="02statements.html">Statements</a></li>
+      <li><a href="03comments.html">Comments</a></li>
+      <li><a href="04variables.html">Variables</a></li>
+      <li><a href="05operators.html">Operators</a></li>
+      <li><a href="06forms.html">Forms</a></li>
+      <li><a href="07functions.html">Functions</a></li>
+      <li style="background-color: #111;"><a href="08objects.html">Objects</a></li>
+      <li><a href="09events.html">Events</a></li>
+      <li><a href="10strings.html">Strings</a></li>
+      <li><a href="11numbers.html">Numbers</a></li>
+      <li><a href="12arrays.html">Arrays</a></li>
+      <li><a href="13dates.html">Dates</a></li>
+      <li><a href="14math.html">Math</a></li>
+      <li><a href="15conditions.html">Conditions</a></li>
+      <li><a href="16loops.html">Loops</a></li>
+      <li><a href="17regexp.html">Regexp</a></li>
+      <li><a href="18errors.html">Errors</a></li>
+      <li><a href="19this.html">this.</a></li>
+      <li><a href="20let.html">Let</a></li>
+      <li><a href="21const.html">Const.</a></li>
+      <li><a href="22classes.html">Classes</a></li>
+      <li><a href="23debugging.html">Debugging</a></li>
+    </ul>
+    <div class="body">
+      <h2>JavaScript Objects</h2>
+      <h2>Real Life Objects, Properties, and Methods</h2>
+      <pre>In real life, a car is an object.
+
+A car has properties like weight and color, and methods like start and stop:</pre>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th width="300px">Object</th>
+          <th>Properties</th>
+          <th>Methods</th>
+        </tr>
+        <tr>
+          <td><img src="Attachments/car.jfif" style="width:200px; height=250px;"></td>
+          <td>	
+car.name = Fiat
+<br>
+car.model = 500<br>car.weight = 850kg<br>car.color = white</td>
+          <td>car.start()
+<br>
+car.drive()
+<br>
+car.brake()
+<br>
+car.stop()</td>
+        </tr>
+      </table>
+      <pre>All cars have the same <b>properties</b>, but the property <b>values</b> differ from car to car.
+
+All cars have the same <b>methods</b>, but the methods are performed <b>at different times.</b></pre>
+      <h2>JavaScript Objects</h2>
+      <pre>You have already learned that JavaScript variables are containers for data values.
+
+This code assigns a <b>simple value</b> (Fiat) to a <b>variable</b> named car:
+
+Objects are variables too. But objects can contain many values.
+
+This code assigns many values (Fiat, 500, white) to a variable named car:</pre>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var car = {type:"Fiat", model:"500", color:"white"};</pre>
+        <iframe src="Attachments/obj1.html" title="Example1" width=100% height=100px></iframe>
+      </div>
+      <pre>The values are written as <b>name:value</b> pairs (name and value separated by a colon).
+
+<em>JavaScript objects are containers for <b>named values</b> called properties or methods.</em></pre>
+      <h2>Object Definition</h2>
+      <p>You define (and create) a JavaScript object with an object literal.</p>
+      <p>Spaces and line breaks are not important. An object definition can span multiple lines:</p>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};</pre>
+      </div>
+      <h2>Object Properties</h2>
+      <p>The <b>name:values</b> pairs in JavaScript objects are called <b>properties:</b></p>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Property</th>
+          <th>Property Value</th>
+        </tr>
+        <tr>
+          <td>firstName</td>
+          <td>Mike</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>lastName</td>
+          <td>Ross</td>
+        </tr>
+        <tr>
+          <td>age</td>
+          <td>30</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>eyeColor</td>
+          <td>blue</td>
+        </tr>
+      </table>
+      <h2>Accessing Object Properties</h2>
+      <pre>You can access object properties in two ways:
+
+<em>objectName.propertyName</em>
+or
+
+<em>objectName["propertyName"]</em></pre>
+      <h2>Object Methods</h2>
+      <pre>Objects can also have <b>methods.</b>
+
+Methods are <b>actions</b> that can be performed on objects.
+
+Methods are stored in properties as <b>function definitions.</b></pre>
+      <table style="margin: 10px; border: 1px solid black; width:90%; text-align:left;" >
+        <tr style="background-color:white;">
+          <th>Property</th>
+          <th>Property Value</th>
+        </tr>
+        <tr>
+          <td>firstName</td>
+          <td>Mike</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>lastName</td>
+          <td>Ross</td>
+        </tr>
+        <tr>
+          <td>age</td>
+          <td>30</td>
+        </tr>
+        <tr style="background-color:white;">
+          <td>eyeColor</td>
+          <td>blue</td>
+        </tr>
+        <tr>
+          <td>fullName</td>
+          <td>function() {return this.firstName + " " + this.lastName;}</td>
+      </table>
+      <em>A method is a function stored as a property.</em>
+      <div class="example">
+        <h3>Example</h3>
+        <pre>var person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};</pre>
+      </div>
+      <h2>The <em>this</em> Keyword</h2>
+      <pre>In a function definition, this refers to the "owner" of the function.
+
+In the example above, this is the <b>person object</b> that "owns" the fullName function.
+
+In other words, this.firstName means the firstName property of <b>this object.</b>
+
+Read more about the this keyword at JS this Keyword.</pre>
+      <h2>Accessing Object Methods</h2>
+      <p>You access an object method with the following syntax:</p>
+      <div class="example">
+        <em>objectName.methodName()</em>
+        <h3>Example</h3>
+        <p>name = person.fullName();</p>
+      </div>
+      <p>If you access a method <b>without</b> the () parentheses, it will return the <b>function definition:</b></p>
+      <div class="example">
+        <h3>Example</h3>
+        <p>name = person.fullName;</p>
+        <iframe src="Attachments/obj2.html" title="Example2" width=100% height=100px ></iframe>
+      </div>
+      <h2>Do Not Declare Strings, Numbers, and Booleans as Objects!</h2>
+      <p>When a JavaScript variable is declared with the keyword "new", the variable is created as an object:</p>
+      <div class="example">
+        <pre>var x = new String();        // Declares x as a String object
+var y = new Number();        // Declares y as a Number object
+var z = new Boolean();       // Declares z as a Boolean object</pre>
+      </div>
+      <p>Avoid String, Number, and Boolean objects. They complicate your code and slow down execution speed.</p>
+      <div class="example">
+        <h3 align=center>Assignment</h3>
+        <pre>1. Create an object named Student with the following properties:
+	a. FirstName
+	b. LastName
+	c. Class
+	d. Age
+	e. subMarks1
+	f. subMarks2
+	g. subMarks3
+	h. subMarks4
+	i. subMarks5
+	j. TotalMarks
+	k. Percentage
+	l. Grade
+and methods:
+	a. getInfo() - To input the values into properties
+	b. getTotal() - To calculate the total score.
+	c. getPercentage() - To calculate the percentage.
+	b. getGrade() - to assign a grade.
+	and print the outputs.</pre>
+      </div>
+</div>
+<ul style="width:90%; overflow:hidden; margin:50px;background-color:white;">
+      <li style="float:left;background-color:red;"><a href="07functions.html">Prev</a></li>
+      <li style="float:right;background-color:red;"><a href="09events.html">Next</a></li>
+</ul>
+</body>
+</html> 

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<p>Replace "HTML" with "JavaScript" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Let's learn HTML!</p>
+
+<script>
+function myFunction() {
+  var str = document.getElementById("demo").innerHTML; 
+  var res = str.replace("HTML", "JavaScript");
+  document.getElementById("demo").innerHTML = res;
+}
+</script>
+
+</body>
+</html>
